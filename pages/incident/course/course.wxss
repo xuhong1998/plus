@@ -1,0 +1,115 @@
+.wx-week{
+  display: flex;
+  text-align: center;
+  font-size: 30rpx;
+  box-shadow:5px 5px 10px #e2e2e2;
+  margin-bottom:4rpx;
+}
+.wx-list{
+  display: none;
+  min-height:80rpx;
+  text-align:70rpx;
+  font-size:40rpx;
+  font-weight:500;
+  line-height:70rpx;
+}
+.wx-class-name{
+  text-align: center;
+}
+.wx-week-day{
+  width: 130rpx;
+  align-items:center;
+  height:100%;
+  justify-content:center;
+  max-width:100%;
+  text-align: center;
+  
+}
+.wx-week-day view:nth-child(1){
+  font-size:32rpx;
+  font-weight:500;
+}
+.wx-week-day view:nth-child(2){
+  font-size:24rpx;
+  font-weight:200;
+  color:#aaa;
+  line-height:39rpx;
+  margin-bottom:2rpx;
+}
+.wx-week-day:nth-child(2) view:nth-child(2){
+  color: #39b54a;
+}
+.wx-course{
+  border-bottom:#e7ebed dashed 3rpx;
+
+  height: 100rpx;
+  display:  flex;
+}
+.wx-week .wx-week-day:nth-child(2){
+  border-bottom:#39b54a 5rpx solid;
+  color:#39b54a;
+}
+.wx-course-time{
+
+}
+.wx-course-time text:nth-child(1){
+  display: block;
+}
+.class{
+  width:136rpx;
+  height:200rpx;
+  position:fixed;
+  font-size:23rpx;
+  background:#1cbbb4;
+  color:#fff;
+  padding:5px;
+  border-radius:15rpx;
+}
+
+
+
+.tab-container{
+  width:750rpx;
+  display:flex;
+
+}
+.tab-body{
+  width:750rpx;
+  display:flex;
+  background: #fff;
+}
+.tab-pitch{
+  background-color:#f2f2f1;
+  color:#8799a3;
+}
+.left{
+  width:100rpx;
+  font-size:30rpx;
+  justify-content:center;
+  display:flex;
+  align-items:center;
+}
+.flex-item{
+  width: 125rpx;
+}
+.kcb-item {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  color:#fff;
+}
+.smalltext{
+  padding: 20rpx;
+}
+.wx-week-num{
+  justify-content:center;
+  display:flex;
+  align-items:center;
+  width: 100rpx;
+  font-size:70rpx;
+  color:#39b54a;
+  font-weight:700;
+
+}

@@ -1,0 +1,36 @@
+<view class="head wx-head">
+    <view class="head-time">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="weui-input">{{array[index]}}<text class='iconfont icon-open' ></text></view>
+        </picker>
+    </view>
+    <view class="head-title">
+        <view>必修学分:<text>{{TotalCredit}}</text></view>
+        <view>必修绩点:<text>{{AverageScorePoint}}</text></view>
+        <view class='iconfont icon-ziyuanxhdpi' bindtap='refresh'></view>
+    </view>
+</view>
+<view class="main">
+    <view class="list">
+        <block wx:for="{{list}}" wx:for-item="item" wx:for-index="id" >
+            <view class="data">
+                <view class="data-adj">
+                    <view class="upWard" style="background-color:{{id==0?'#fff':'#e2e5f2'}}"></view>
+                    <view class="dot" style='background-color:{{color[id]}}'></view>
+                    <view class="offWard"></view>
+                </view>
+                <view class="grade">
+                    <view class="grade-title">
+                        <view class="grade-column">{{list[id].CourseTitle}}</view>
+                        <view class="grade-rum">
+                            <text>{{list[id].CourseCategory}}</text>
+                            <text>学分:{{list[id].credit}}</text>
+                            <text>绩点:{{list[id].AchievementPoint}}</text>
+                        </view>
+                    </view>
+                    <view class="data-score" style='color:{{color[id]}}'>{{list[id].score}}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

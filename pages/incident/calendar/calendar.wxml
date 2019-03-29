@@ -1,0 +1,27 @@
+<calendar  calendar-style="calendar"  header-style="calendar-header" board-style="calendar-board" active-type="rounded" bindnextMonth="next"  days-color="{{data_style}}" binddayClick="dayClick"/>
+<view class='wx-time margin-top'>
+    <view class='wx-time-head wx-bar wx-item-head'>
+        <view class='wx-item-left'>倒计日</view>
+        <view>添加</view>
+        <view class='iconfont icon-tianjia'></view>
+    </view>
+    <view class="wx-time-body">
+        <view class="wx-box" wx:for="{{list}}">
+            <view class="wx-box-day">{{item.month}}/{{item.day}}</view>
+            <view class='wx-box-llish'>
+                <view></view>
+                <view></view>
+                <view></view>
+            </view>
+            <view class="wx-box-name">
+                <text>{{item.festival}}</text>
+                <text>{{item.remark}}</text>
+            </view>
+            <viem class="wx-box-distance">{{item.distance}}天后</viem>
+        </view>
+        <!-- <view class="bottom">
+            <view class='solid'></view>
+        </view> -->
+    </view>
+</view>
+<view class=''></view>

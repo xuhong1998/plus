@@ -1,0 +1,15 @@
+<view class="wx-list menu menu-avatar">
+    <view class="wx-item item" wx:for="{{list}}">
+        <view class="wx-round">
+            <text>{{index + 1}}</text>
+        </view>
+        <view class="wx-content">
+            <view class="wx-content-name">{{item.bookName}}</view>
+            <view class="wx-content-writer">{{item.author}}</view>
+        </view>
+        <view class="wx-rest">
+            <text>6</text>
+            <text>馆藏数</text>    
+        </view>
+    </view>
+</view>

@@ -1,0 +1,27 @@
+<view class="wx-list background">
+    <view class="wx-class-name">第5周</view>
+    <view class=""></view>
+</view>
+<view class='wx-week background'>
+  <view class='wx-week-num'>5</view>
+  <view class="wx-week-day" wx:for="{{['一','二','三','四','五']}}">
+      <view>周{{item}}</view>
+      <view>10.26</view>
+  </view>
+</view>
+<scroll-view class='tab-scroll' scrolly-y="true">
+    <view class="tab-body">
+        <view class="tab-pitch">
+            <view class="left"  wx:for="{{[1,2,3,4,5,6]}}" style='height:240rpx;border-bottom:1rpx dashed lightgray'>{{item}}</view>
+        </view>
+        <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}">
+          <view style="width:750rpx;margin-top:{{(index+1)*120}}rpx;  position: absolute;border-bottom:1rpx dashed lightgray;">
+          </view>
+        </view>
+        <view wx:for="{{wlist}}">
+          <view class="flex-item kcb-item {{colorArrays[index%9]}} light" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*px + 4}}rpx;margin-top:{{(item.skjc-1)*120+5}}rpx;height:{{item.skcd*120-5}}rpx;">
+            <view class="smalltext" >{{item.kcmc}}</view>
+          </view>
+        </view>
+    </view>
+</scroll-view>

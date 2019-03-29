@@ -1,0 +1,150 @@
+.wx-head{
+    padding:10rpx 40rpx 20rpx;
+    display: flex;
+}
+.wx-book-mess{
+    flex: 1;
+}
+.wx-book-title{
+    font-size: 40rpx;
+    line-height: 60rpx;
+    padding-bottom: 10rpx;
+    font-weight: 700;
+}
+.wx-book-isbn{
+   font-size:27rpx;
+  line-height:40rpx;
+  color:#8799a3;
+}
+.wx-book-img image{
+    width: 300rpx;
+    height: 450rpx;
+}
+.wx-list .item:nth-child(1){
+    border:none;
+    margin-top: 10rpx;
+}
+.item{
+    border-top:1rpx solid #ddd;
+    height: 140rpx;
+}
+.wx-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100rpx;
+    background: #fff;
+    padding: 0 30rpx;
+}
+.wx-round{
+    width:84rpx;
+    height:84rpx;
+    background-image:linear-gradient(45deg, #39b54a, #8dc63f);
+    border-radius:50%;
+    position:relative;
+    color:#fff;
+    align-items:center;
+    display:inline-flex;
+    justify-content:center;
+}
+.wx-content{
+    flex: 1;
+    padding-left: 20rpx;
+}
+
+.wx-rest text{
+    transform:translate(1rpx, 1rpx);
+    font-size: 24rpx;
+    vertical-align: middle;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0rpx 16rpx;
+    height: 48rpx;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+.wx-rest text:nth-child(1){
+    background-color:#0081ff;
+    color:#fff;
+    border-top-left-radius:10rpx;
+    border-bottom-left-radius:10rpx;
+}
+.wx-rest text:nth-child(2){
+    border:1rpx solid #0081ff;
+    border-top-right-radius:10rpx;
+    border-bottom-right-radius:10rpx;
+}
+.wx-content-name{
+    font-size:35rpx;
+}
+.wx-content-writer{
+    font-size: 25rpx;
+    color: #aaa;
+}
+.tabbar{
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 750rpx;
+}
+.box view.wx-bar {
+   margin-top:20rpx;
+}
+.bg-white {
+  background-color:#fff;
+  color:#666;
+}
+.wx-bar.tabbar.shop .action {
+  width: 140rpx;
+  flex: initial;
+}
+.wx-bar.tabbar .action {
+  font-size: 22rpx;
+  flex: 1;
+  text-align: center;
+  padding: 0;
+  display: block;
+  height: auto;
+  line-height: 1;
+  margin: 0;
+  background-color: inherit;
+  overflow: initial;
+}
+.wx-bar.tabbar .submit:last-child {
+  flex: 2.6;
+}
+.wx-bar.tabbar .submit {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  flex: 2;
+  align-self: stretch;
+}
+.bg-red {
+  background-color: #e54d42;
+  color: #fff;
+}
+.iconfont{
+  font-size:40rpx;
+  padding-bottom:10rpx;
+}
+.wx-book-body{
+  margin: 10rpx 30rpx 40rpx;
+}
+.wx-book-name{
+  margin-top: 60rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  font-weight: 500;
+}
+.wx-boot-text{
+  margin-top:20rpx;
+  line-height:50rpx;
+  font-size:27rpx;
+  font-weight:500;
+  color: #8799a3;
+}
