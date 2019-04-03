@@ -6,7 +6,7 @@
         </navigator>
     </view>
 </view>
-<view class='wx-list menu margin-top'>
+<view class='wx-list menu margin-top' style='display:{{news? "block":"none"}}'>
     <view class="wx-item">
         <view class="content">
             <image class="inform-images" src="../../images/icon/inform.png"></image>
@@ -20,7 +20,7 @@
         </view>
     </view>
 </view>
-<view class='wx-remind margin-top'>
+<view class='wx-remind margin-top' style='display:{{class? "block":"none"}}'>
     <view class="wx-remind-header">
         <view class="wx-remind-title">
             <text>上课提醒</text>
@@ -43,13 +43,23 @@
         </view>
     </view>
 </view>
-<view  class='margin-top weather background'>
-    <image src='../../images/aaa.jpg'></image>
+<view  class='margin-top weather background' style='display:{{weather? "block":"none"}}'>
+    <view class='weather-temp'>
+        <image src='../../images/weather/weather_{{wea.images}}.jpg'></image>
+        <view class='weather-text'>
+            <view class='air'>{{wea.temp}}</view>
+            <view class='weather-rest'>
+                <view class='round'></view>
+                <view class='weather-rest-text'>Sunny</view>
+                <view class='site'>{{wea.site}}</view>
+            </view>
+        </view>
+    </view>
     <view class='weather-content'>
         <view class="weather-content-day">
-            <view>13/22云夜</view>
-            <view>晴，明天上午8点钟后转小雨，其后阴</view>
+            <view style="color:{{wea.color}}">{{wea.Mintemp}}/{{wea.Maxtemp}}  {{wea.wea}}</view>
+            <view>{{wea.air_tips}}</view>
         </view>
-        <view class="iconfont icon-yu"></view>
+        <view style="color:{{wea.color}}" class="iconfont {{wea.icon}}"></view>
     </view>
 </view>

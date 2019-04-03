@@ -11,6 +11,7 @@ page{
 }
 .wxui-input input{
   flex: 1;
+  margin-top:9rpx;
 }
 .icon-sousuo{
   font-size:20rpx;
@@ -90,4 +91,29 @@ page{
   padding:13rpx 23rpx;
   margin:10rpx;
   color:#666;
+}
+.wx-content-name,.wx-content-writer{
+  width:370rpx;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:heidden;
+  display: inline-block;
+}
+.wx-content-name{
+  width:370rpx;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 32rpx;
+}
+.wx-content-writer{
+  font-size: 27rpx;
+  color:#666;
+}
+.about{
+  text-align:center;
+  margin-top:60rpx;
+  color:#aaa;
+  font-size:30rpx;
 }

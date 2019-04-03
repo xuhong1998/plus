@@ -9,11 +9,60 @@ Page({
     passwd_focus: false,
     userid: '',
     passwd: '',
-    angle: 0
+    angle: 0,
+    page:""
   },
-  onLoad:function(){
-  
-   
+  onLoad:function(e){
+    this.setData({
+      page:e.id
+    })
+  },
+  getlanding:function (userName, userpassword){
+    let that = this;
+    wx.login({
+      success(res) {
+        if (res.code) {
+          console.log(res.code)
+          wx.request({
+            url: 'https://xuchaoyang.cn/Loginweb/BoundStuNoServlet',
+            data: {
+              code: res.code,
+              userName:userName,
+              userpassword:userpassword
+            },
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success(e) {
+              if(e.data.state){
+                if (that.data.page == 1) {
+                  wx.navigateTo({
+                    url: '../show/show',
+                  })
+                }
+                if (that.data.page == 2) {
+                  wx.navigateTo({
+                    url: '../../incident/course/course',
+                  })
+                }
+                wx.showToast({
+                  title: '绑定成功',
+                  icon: 'success',
+                  duration: 4000
+                })
+              }else{
+                wx.showToast({
+                  title: '账户或密码错误',
+                  icon: 'success',
+                  duration: 4000
+                })
+              }
+            }
+          })
+        } else {
+        }
+      }
+    })
   },
   onReady: function () {
     var that = this;
@@ -36,13 +85,15 @@ Page({
   bind: function () {
     var that = this;
     if (!that.data.userid || !that.data.passwd) {
-      app.showErrorModal('账号及密码不能为空', '提醒');
-      return false;
+      wx.showToast({
+        title: '账号及密码不能为空',
+        icon: 'none',
+        duration: 4000
+      })
+      return;
     }
-    console.log(1)
-    wx.navigateTo({
-      url: '../show/show?user=' + that.data.userid + '&passwd=' + that.data.passwd,
-    })
+    this.getlanding(that.data.userid, that.data.passwd);
+    
   },
   useridInput: function (e) {
     this.setData({

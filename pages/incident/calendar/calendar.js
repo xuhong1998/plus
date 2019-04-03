@@ -39,7 +39,6 @@ Page({
       color: 'white',
       background: '#b49eeb'
     });
-    console.log(data_style);
     this.setData({
       data_style:data_style
     })

@@ -1,0 +1,53 @@
+page{
+  background-color: #fff;
+}
+.wx-item{
+  padding: 30rpx 30rpx 30rpx 30rpx;
+  position: relative;
+  display: block;
+  z-index: 0;
+}
+.content{
+  background-color:#f1f1f1;
+  color:#666;
+  padding: 30rpx;
+  border-radius: 6rpx;
+  display: block;
+  line-height: 1.6;
+}
+.cu-capsule {
+  display: inline-flex;
+  vertical-align: middle;
+}
+.cu-tag {
+  font-size: 24rpx;
+  vertical-align: middle;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0rpx 16rpx;
+  height: 48rpx;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+  white-space: nowrap;
+}
+.wx-white {
+  border-top-left-radius:6rpx;
+  border-bottom-left-radius:6rpx;
+  background-color:#1cbbb4;
+  color:#fff;
+}
+.bg-cyan {
+  background-color: var(--cyan);
+  color: #fff;
+}
+.line-white{
+  color:#1cbbb4;
+  border:1rpx solid #1cbbb4;
+  border-top-right-radius:7rpx;
+  border-bottom-right-radius:7rpx;
+}
+.text-content{
+  margin-top: 40rpx;
+}

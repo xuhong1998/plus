@@ -34,6 +34,10 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    isNews:true,
+    isClass:true,
+    isWeather:true,
+    isLog:false,
   }
 })

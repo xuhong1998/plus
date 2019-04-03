@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
 
   /**
@@ -6,22 +7,22 @@ Page({
   data: {
     iconList:[{
       id:"1",
-      url:"grade/show/show",
+      url:"grade/landing/landing?id=1",
       icon:"grade",
       name:"成绩"
     },{
       id:"2",
-        url:"library/listbox/listbox",
+      url:"library/listbox/listbox",
       icon:"book",
       name:"图书"
     },{
       id:"3",
-        url:"library/collect/collect",
+      url:"library/collect/collect",
       icon:"collect",
       name:"图书收藏"
     },{
       id:"4",
-      url:"incident/course/course",
+        url:"grade/landing/landing?id=1",
       icon:" schedule",
       name:"课表"
     },{
@@ -63,7 +64,22 @@ Page({
         site: "B教b205",
         color: "#ffca43",
         background: "#fef7e5"
-      }]
+      }],
+    news: true,
+    weather: true,
+    class: true,
+    wea:{
+      temp:"",
+      Maxtemp:"",
+      Mintemp:"",
+      site:"",
+      wea:"",
+      air_tips:"",
+      background:"",
+      icon:"",
+      color:"",
+      images:""
+    }
   },
 
   /**
@@ -71,13 +87,41 @@ Page({
    */
   
   onLoad: function (options) {
+    this.getWeather();
+  },
+  getOpenid:function(){
+    var that = this;
     wx.login({
-      success(res){
-        console.log(res.code)
+      success(res) {
+        if (res.code) {
+          console.log(res.code)
+          wx.request({
+            url: 'https://xuchaoyang.cn/Loginweb/Login',
+            data: {
+              code:res.code
+            },
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success(e) {
+              console.log(e.data)
+              if (e.data.NoState){
+                app.globalData.isLog = false
+                that.data.iconList[0].url = "grade/show/show";
+                that.data.iconList[3].url = "incident/course/course";
+                console.log("1")
+                that.setData({
+                  iconList: that.data.iconList
+                })
+              }
+            }
+          })
+        } else {
+          app.globalData.isLog = false;
+        }
       }
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -89,12 +133,82 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let that = this, weather = [];
+    let seteat = {
+      images: "",
+      color: "",
+      icon: ""
+    };
+    this.getOpenid();
+    this.setData({
+      news: app.globalData.isNews,
+      class:app.globalData.isClass,
+      weather:app.globalData.isWeather
+    })
   },
-
+  getWeather:function(){
+    let that = this, wea = this.data.wea, seteat = {};
+    wx.request({
+      url: 'https://xuchaoyang.cn/Loginweb/WeatherServlet',
+      data:{
+        cityid:101200102
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success:function(res){
+        let data = res.data.data;
+        wea.temp = data.tem.substring(0,2);
+        wea.Maxtemp = data.tem1.substring(0,2);
+        wea.Mintemp = data.tem2.substring(0,2);
+        wea.site = "WuHan";
+        wea.wea = data.wea;
+        seteat = that.getImage(data.wea_img);
+        wea.air_tips = data.air_tips;
+        wea.images = seteat.images;
+        wea.icon = seteat.icon;
+        wea.color = seteat.color;
+        that.setData({
+          wea:wea
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
+  getImage:function(icon){
+    let seteat = {
+      images:"",
+      color:"",
+      icon:""
+    };
+    if(icon == "yu"){
+      seteat.images = "06";
+      seteat.color = "#5dc8e1";
+      seteat.icon = "icon-yu";
+      return seteat;
+    }if(icon == "yun" || icon == "yin"){
+      seteat.images = "02";
+      seteat.color = "#53b1ff";
+      seteat.icon = "icon-yintian";
+      return seteat;
+    } if (icon == "qing") {
+      seteat.images = "03";
+      seteat.color = "#4cb4fb";
+      seteat.icon = "icon-duoyun";
+      return seteat;
+    } if (icon == "xue") {
+      seteat.images = "04";
+      seteat.color = "#6ac0fe";
+      seteat.icon = "icon-xue";
+      return seteat;
+    } 
+    seteat.images = "01";
+    seteat.color = "#53b1ff";
+    seteat.icon = "icon-duoyun";
+    return seteat;
+  },
   onHide: function () {
 
   },

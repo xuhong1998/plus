@@ -1,7 +1,7 @@
 
 <view class='wx-head wx-item'>
   <view class='wxui-input'>
-      <input class="" maxlength="10" bindinput="bindKeyInput" placeholder="石油" selection-start="-1" selection-end="-1" cursor="-1" value="">    
+      <input class="" maxlength="10" bindinput="bindKeyInput" placeholder="{{name}}" selection-start="-1" selection-end="-1" cursor="-1" value="">    
       </input>
     <view class='iconfont icon-sousuo' bindtap='navigate'></view>
   </view>
@@ -16,22 +16,23 @@
   <view class='seek-history seek-content'>
     <view class='seek-content-name'>热门搜索</view>
     <view class='seek-content-list'>
-      <view class='' wx:for="{{history}}">{{item}}</view>
+      <view class='' wx:for="{{history}}" id="{{item}}" bindtap='setNavigator'>{{item}}</view>
     </view>
   </view>
 </view>
 <view class="wx-list menu menu-avatar" style='display:{{show? "none":"block"}};'>
-    <view class="wx-item item" wx:for="{{list}}">
+    <view class="wx-item item" wx:for="{{list}}" bindtap='setBook' id="{{item.no}}">
         <view class="wx-round">
             <text>{{index + 1}}</text>
         </view>
-        <view class="wx-content">
-            <view class="wx-content-name">{{item.bookName}}</view>
+        <view class="wx-content" >
+            <view class="wx-content-name" id="">{{item.bookName}}</view>
             <view class="wx-content-writer">{{item.author}}</view>
         </view>
         <view class="wx-rest">
-            <text>6</text>
+            <text>{{item.Count}}</text>
             <text>馆藏数</text>    
         </view>
     </view>
 </view>
+<view class='about' style='display:{{about? "none":"block"}}'>没有关于{{name}}的图书</view>

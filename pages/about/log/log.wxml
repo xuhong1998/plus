@@ -1,0 +1,33 @@
+<view class="body">
+    <view class="wx-item">
+        <view class="content">
+            <view class="cu-capsule radius">
+                <view class="cu-tag wx-white">v2.0.1</view>
+                <view class="cu-tag line-white">2019/04/06</view>
+            </view>
+            <view class="text-content">
+                <view>1.第一个正式版本上线</view>
+                <view>2.图书馆功能重写，加入豆瓣接口</view>
+                <view>3.图书收藏,搜索历史</view>
+                <view>4.修复成绩查询bug</view>
+                <view>5.课表查询功能</view>
+                <view>6.校历查询功能</view>
+                <view>7.考试查询功能</view>
+                <view>8.对前端代码第一次重构，修改了大部分界面的ui</view>
+            </view>
+        </view>
+    </view>
+    <view class="wx-item">
+        <view class="content">
+            <view class="cu-capsule radius">
+                <view class="cu-tag wx-white">v1.0.1</view>
+                <view class="cu-tag line-white">2019/03/23</view>
+            </view>
+            <view class="margin-top-sm text-content">
+                <view>1.第一个测试版本上线</view>
+                <view>2.图书馆搜索功能</view>
+                <view>3.成绩查询功能</view>
+            </view>
+        </view>
+    </view>
+</view>

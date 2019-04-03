@@ -12,9 +12,13 @@
     font-weight: 700;
 }
 .wx-book-isbn{
-   font-size:27rpx;
-  line-height:40rpx;
-  color:#8799a3;
+    font-size:27rpx;
+    line-height:47rpx;
+    color:#8799a3;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    width:350rpx;
 }
 .wx-book-img image{
     width: 300rpx;
@@ -133,7 +137,8 @@
   padding-bottom:10rpx;
 }
 .wx-book-body{
-  margin: 10rpx 30rpx 40rpx;
+  margin:10rpx 30rpx 120rpx;
+  padding-bottom:30px;
 }
 .wx-book-name{
   margin-top: 60rpx;
@@ -147,4 +152,18 @@
   font-size:27rpx;
   font-weight:500;
   color: #8799a3;
+}
+.button{
+  height: auto;
+  line-height: 1;
+  margin: 0;
+  background-color: inherit;
+  overflow: initial;
+  font-size:22rpx;
+}
+.button::after {
+  border: none;
+}
+.noshow{
+  display: none;
 }

@@ -1,0 +1,44 @@
+.menu {
+  display:block;
+  overflow:hidden;
+  background-color: #fff;
+
+}
+.wx-item{
+  position:relative;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  min-height:100rpx;
+  background:#fff;
+  padding:10rpx 0rpx;
+}
+.cu-bar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-height: 100rpx;
+  justify-content: space-between;
+}
+.cu-bar .action {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  max-width: 100%;
+  margin-right:20rpx;
+}
+.cu-bar .action:first-child {
+  margin-left: 10rpx;
+  font-size: 30rpx;
+}
+.text-df {
+  padding-right:20rpx;
+  font-size: 28rpx;
+}
+.icon-yuandian:before {
+  content: "\e61e";
+  font-size: 60rpx;
+  color:#0081ff;
+  margin: auto;
+}

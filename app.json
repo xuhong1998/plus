@@ -1,15 +1,17 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/about/home/home",
     
+    "pages/index/index",
+    "pages/grade/landing/landing",
+   "pages/grade/show/show",
     "pages/library/listbox/listbox",
+    "pages/library/detail/detail",
+    "pages/about/home/home",
+    "pages/about/log/log",
+    "pages/about/card/card",
     "pages/library/collect/collect",
     "pages/incident/course/course",
-    "pages/library/detail/detail",
-    "pages/grade/show/show",
     "pages/incident/calendar/calendar",  
-    "pages/grade/landing/landing",
     "pages/logs/logs"
   ],
   "window":{

@@ -1,0 +1,32 @@
+<view class="wx-list menu margin-top">
+    <view class="cu-bar">
+        <view class='action'>
+            <text class='iconfont icon-yuandian'></text>
+            <text class="text-title">通知消息</text>
+        </view>
+        <view class="action">
+            <text class="text-df">{{news? '显示':'不显示'}}</text>
+            <switch class='sm' bindchange='SetShadow' checked="{{news}}" id="news"></switch>
+        </view>
+    </view>
+    <view class="cu-bar">
+        <view class='action'>
+            <text class='iconfont icon-yuandian'></text>
+            <text class="text-title">课程课表</text>
+        </view>
+        <view class="action">
+            <text class="text-df">{{class? '显示':'不显示'}}</text>
+            <switch class='sm' bindchange='SetShadow' checked="{{class}}" id="class"></switch>
+        </view>
+    </view>
+    <view class="cu-bar">
+        <view class='action'>
+            <text class='iconfont icon-yuandian'></text>
+            <text class="text-title">今日天气</text>
+        </view>
+        <view class="action">
+            <text class="text-df">{{weather? '显示':'不显示'}}</text>
+            <switch class='sm' bindchange='SetShadow' checked="{{weather}}" id="weather"></switch>
+        </view>
+    </view>
+</view>

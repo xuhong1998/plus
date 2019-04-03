@@ -1,6 +1,8 @@
-<view class='wx-list background wx-head'>
+<view class='wx-list background wx-head {{show}}'>
     <view class="wx-book-mess">
-        <view class="wx-book-title">漫画之王</view>
+        <view class="wx-book-title">{{kind.bookName}}</view>
+        <view class="wx-book-isbn" wx:for="{{name}}">{{name[index]}}{{index==0?'：':''}}{{value[index]}}</view>
+        <!-- <view class="wx-book-title">漫画之王</view>
         <view class="wx-book-isbn">作者: 刘敬贤 </view>
         <view class="wx-book-isbn">作者: 刘敬贤 </view>
         <view class="wx-book-isbn">作者: 刘敬贤 </view>
@@ -9,52 +11,55 @@
         <view class="wx-book-isbn">作者: 刘敬贤 </view>
         <view class="wx-book-isbn">作者: 刘敬贤 </view>
         <view class="wx-book-isbn">定价: 188.00元 </view>
-        <view class="wx-book-isbn">ISBN: 9787307204539 </view>
+        <view class="wx-book-isbn">ISBN: 9787307204539 </view> -->
     </view>
     <view class="wx-book-img">
-        <image src="https://img3.doubanio.com/view/subject/l/public/s29983120.jpg"></image>
+        <image src="{{kind.image}}"></image>
     </view>
 </view>
-<view class="wx-list margin-top background">
+<view class="wx-list margin-top background {{show}}">
     <view class=' wx-bar wx-item-head'>
         <view class='wx-item-left'>馆藏信息</view>
     </view>
     <view class="wx-list menu menu-avatar">
-        <view class="wx-item item" wx:for="{{kind}}">
+        <view class="wx-item item" wx:for="{{collection}}">
             <view class="wx-round">
                 <text>{{index + 1}}</text>
             </view>
             <view class="wx-content">
-                <view class="wx-content-name">{{item.bookName}}TP391.41/1367</view>
-                <view class="wx-content-writer">{{item.author}}武汉校区中文图书</view>
+                <view class="wx-content-name">{{item.CallNo}}</view>
+                <view class="wx-content-writer">{{item.CurLocal}}</view>
             </view>
             <view class="wx-rest">
-                <text>在馆</text>
+                <text>{{item.CollectionStatus}}</text>
                 <text>馆藏状态</text>
             </view>
         </view>
     </view>
 </view>
-<view class="wx-list margin-top background">
+<view class="wx-list margin-top background {{show}}">
   <view class='wx-bar wx-item-head'>
         <view class='wx-item-left'>本书简介</view>
   </view>
   <view class='wx-book-body'>
     <view class='wx-book-name'>内容简介</view>
-    <view class='wx-boot-text'>作为一本极具讽刺性的图像小说，新加坡的重大历史事件被这位虚构的漫画家陈福财一一进行艺术重构，他别出心裁地糅合了各种漫画元素将新加坡历史进行了超现实主义的呈现，以《超级铁人》致敬《铁臂阿童木》，以《蟑螂侠》戏拟漫威的《蜘蛛侠》、DC的《蝙蝠侠》，给我们上了一堂关于新加坡和漫画书自身进程的历史课。</view>
-    <view class='wx-book-name'>内容简介</view>
-    <view class='wx-boot-text'>作为一本极具讽刺性的图像小说，新加坡的重大历史事件被这位虚构的漫画家陈福财一一进行艺术重构，他别出心裁地糅合了各种漫画元素将新加坡历史进行了超现实主义的呈现，以《超级铁人》致敬《铁臂阿童木》，以《蟑螂侠》戏拟漫威的《蜘蛛侠》、DC的《蝙蝠侠》，给我们上了一堂关于新加坡和漫画书自身进程的历史课。</view>
+    <view class='wx-boot-text'>{{kind.contentValidity}}</view>
+    <view class='wx-book-name'>作者简介</view>
+    <view class='wx-boot-text'>{{kind.AuthorBriefIntroduction}}</view>
   </view>
 </view>
-<view class="wx-bar bg-white tabbar border">
-    <view class="action text-orange">
+<view class="wx-bar bg-white tabbar border {{show}}">
+    <view class="action text-orange" bindtap='setIndex'>
         <view class='iconfont icon-shouye'></view>首页
     </view>
-    <view class="action text-orange">
+    <view class="action text-orange" bindtap='setListbox'>
         <view class='iconfont icon-sousuo1'></view>搜索
     </view>
     <view class="action text-orange">
-        <view class='iconfont icon-fenxiang'></view> 分享
+      <button open-type='share' class="text-grey button" >
+          <view class='iconfont icon-fenxiang'></view> 分享
+          </button>
     </view>
+    
     <view class='bg-red submit'>立即收藏</view>
 </view>

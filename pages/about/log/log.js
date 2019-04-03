@@ -1,4 +1,4 @@
-// pages/about/home/home.js
+// pages/about/log/log.js
 Page({
 
   /**
@@ -21,28 +21,7 @@ Page({
   onReady: function () {
 
   },
-  CopyLink:function(){
-    wx.setClipboardData({
-      data: '111100',
-      success:res =>{
-        wx.showToast({
-          title: '已复制',
-          duration:1000,
-        })
-      }
-    })
-  },
-  CopyQQ:function(){
-    wx.setClipboardData({
-      data: '453255330',
-      success: res => {
-        wx.showToast({
-          title: '已复制',
-          duration: 1000,
-        })
-      }
-    })
-  },
+
   /**
    * 生命周期函数--监听页面显示
    */

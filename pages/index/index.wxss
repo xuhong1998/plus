@@ -12,6 +12,7 @@
   position: relative;
   transition-duration: 0s;
   width:25%;
+
 }
 .wx-list.grid>.wx-item text {
   display: block;
@@ -163,14 +164,13 @@
   margin-bottom:100rpx;
 }
 .weather-content-day view:nth-child(1){
-  line-height:30px;
-  font-size:50rpx;
+  font-size:44rpx;
   color:#1cbbb4;
-  margin:10rpx 0rpx;
+  margin-bottom: 14rpx;
 }
 .weather-content-day view:nth-child(2){
   color:#aaa;
-  font-size:30rpx;
+  font-size:23rpx;
 }
 .weather-content{
   display:flex;
@@ -181,5 +181,27 @@
   margin:auto;
   font-size:70rpx;
   color:#1cbbb4;
+}
+.weather-temp{
+  position:relative;
+}
+.weather-text{
+  position:absolute;
+  color:#fff;
+  display: flex;
+  top:60rpx;
+  left:60rpx;
+}
+.air{
+  font-size:90rpx;
+}
+.weather-rest{
+  padding-left: 15rpx;
+}
+.round{
+  width:25rpx;
+  height:25rpx;
+  border:7rpx solid #fff;
+  margin-bottom:6px;
 
 }
