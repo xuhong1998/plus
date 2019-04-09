@@ -9,6 +9,7 @@
   min-height: 100rpx;
   background: #fff;
   padding: 0 30rpx;
+  position:relative;
 }
 .wx-round{
   width:84rpx;
@@ -48,4 +49,22 @@
   border:1rpx solid #0081ff;
   border-top-right-radius:10rpx;
   border-bottom-right-radius:10rpx;
+}
+.item .remove{
+    width: 60px;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.wx-content-name,.wx-content-writer{
+  width:380rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }

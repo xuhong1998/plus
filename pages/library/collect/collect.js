@@ -1,45 +1,195 @@
 // pages/library/collect/collect.js
+var startX, startY, key, endX, endY, maxRight = 100;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list:[]
+    list:[],
+    cardTeams:[]
   },
+  drawStart : function(e){
+    var touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    var cardTeams = this.data.cardTeams;
+    for(var i in cardTeams){
+      var data = cardTeams[i];
+      data.startRight = data.right;
+    }
+    key = true;
+  },
+  drawEnd : function(e){
+    console.log("drawEnd");
+    var cardTeams = this.data.cardTeams;
+    for(var i in cardTeams){
+      var data = cardTeams[i];
+      if(data.right <= 100/2){
+        data.right = 0;
+      }else{
+        data.right = maxRight;
+      }
+    }
+    this.setData({
+      cardTeams:cardTeams
+    });
+  },
+  drawMove : function(e){
+    //console.log("drawMove");
+    var self = this;
+    var id = e.currentTarget.id;
+    var cardTeams = this.data.cardTeams;
+    if(key){
+      var touch = e.touches[0];
+      endX = touch.clientX;
+      endY = touch.clientY;
+      console.log("startX="+startX+" endX="+endX );
+      if(endX - startX == 0)
+        return ;
+      var res = cardTeams;
+      //从右往左
+      if((endX - startX) < 0){
+        console.log(id)
+        var startRight = res[id].startRight;
+        var change = startX - endX;
+        startRight += change;
+        if (startRight > maxRight)
+          startRight = maxRight;
+        res[id].right = startRight;
+        // for(var k in res){
+        //   var data = res[k];
+        //   if(res[k].id == dataId){
+        //     var startRight = res[k].startRight;
+        //     var change = startX - endX;
+        //     startRight += change;
+        //     if(startRight > maxRight)
+        //       startRight = maxRight;
+        //     res[k].right = startRight;
+        //   }
+       // }
+      }else{
+        //从左往右
+        var startRight = res[id].startRight;
+        var change = endX - startX;
+        startRight -= change;
+        if (startRight < 0)
+          startRight = 0;
+        res[id].right = startRight;
+        // for(var k in res){
+        //   var data = res[k];
+        //   if(res[k].id == dataId){
+        //     var startRight = res[k].startRight;
+        //     var change = endX - startX;
+        //     startRight -= change;
+        //     if(startRight < 0)
+        //       startRight = 0;
+        //     res[k].right = startRight ;
+        //   }
+        // }
+      }
+      self.setData({
+        cardTeams:cardTeams
+      });
 
+    }
+  },
+  delServer:function(id){
+    let no = this.data.list[id].no
+    wx.login({
+      success(res) {
+        console.log(res.code)
+        if (res.code) {
+          wx.showToast({
+            title: '删除中...',
+            icon: "loading",
+            duration: 10000
+          });
+          console.log(res.code)
+          wx.request({
+            url: 'https://xuchaoyang.cn/Loginweb/BookCollectServlet',
+            data: {
+              code: res.code,
+              no:no,
+              n: 4
+            },
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success: function (res) {
+              wx.hideToast();
+              console.log(res)
+            },
+
+          })
+        }
+      }
+    })
+  },
+  delItem:function(e){
+    let id = e.currentTarget.id;
+    let newlist = [], newcardTeams = []
+    console.log(id)
+    for(let i in this.data.list){
+      if(i != id){
+        console.log(id)
+        newlist.push(this.data.list[i]);
+        newcardTeams.push(this.data.cardTeams[i])
+      }
+    }
+    this.delServer(id);
+    this.setData({
+      list:newlist,
+      cardTeams: newcardTeams
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   this.HttpRequest("石油",1,this.data.list);
+   this.HttpRequest();
   },
-  HttpRequest: function (name, page, list) {
-    let that = this, index = [], Allpage = 1;
-    wx.showLoading({
-      title: '玩命加载中',
-    });
-    if (page > this.data.Allpage) {
-      return;
-    }
-    wx.request({
-      url: 'https://xuchaoyang.cn/Loginweb/BookServlet?bookName=' + name + '&page=' + page,
-      data: {},
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        Allpage = res.data.page;
-        index = Object.keys(res.data.book);
-        for (let i = 0; i < index.length; i++) {
-          list.push(res.data.book[index[i]])
+  HttpRequest: function () {
+    let that = this, index = [], Allpage = 1, cardTeams = [];
+    wx.login({
+      success(res) {
+        console.log(res.code)
+        if (res.code) {
+          wx.showToast({
+            title: '加载中...',
+            icon: "loading",
+            duration: 10000
+          });
+          console.log(res.code)
+          wx.request({
+            url: 'https://xuchaoyang.cn/Loginweb/BookCollectServlet',
+            data: {
+              code: res.code,
+              n: 2
+            },
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success: function (res) {
+              console.log(res.data)
+              for(let i in res.data.book){
+                cardTeams.push({
+                  right: 0,
+                  startRight: 0
+                })
+              }
+              wx.hideToast();
+              console.log(res.data.book)
+              that.setData({
+                list: res.data.book,
+                cardTeams: cardTeams
+              })
+              
+              
+            },
+
+          })
         }
-        that.setData({
-          Allpage: Allpage,
-          list: list,
-          name: name,
-        });
-        wx.hideLoading();
       }
     })
   },

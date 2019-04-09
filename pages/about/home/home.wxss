@@ -17,6 +17,7 @@
   display: flex;
   border-bottom: 2rpx #eeeeee solid;
   flex: 1;
+  padding-left:15rpx;
 }
 .icon-arrow-right-copy-copy-copy{
   margin:auto;
@@ -35,8 +36,8 @@
   padding-left: 30rpx;
 }
 .wx-images image{
-  width:50rpx;
-  height:50rpx;
+  width:45rpx;
+  height:45rpx;
 }
 .wx-list navigator:last-child .wx-item .content{
   border: none;
@@ -47,7 +48,7 @@
 .button{
   background-color:#fff;
   text-align:left;
-  padding-left:0rpx;
+  padding-left:5rpx;
 }
 .button::after {
   border: none;

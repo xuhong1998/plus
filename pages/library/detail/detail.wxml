@@ -50,10 +50,10 @@
 </view>
 <view class="wx-bar bg-white tabbar border {{show}}">
     <view class="action text-orange" bindtap='setIndex'>
-        <view class='iconfont icon-shouye'></view>首页
+        <view class='iconfont icon-aixin'></view>收藏页
     </view>
     <view class="action text-orange" bindtap='setListbox'>
-        <view class='iconfont icon-sousuo1'></view>搜索
+        <view class='iconfont icon-sousuo1'></view>搜索页
     </view>
     <view class="action text-orange">
       <button open-type='share' class="text-grey button" >
@@ -61,5 +61,5 @@
           </button>
     </view>
     
-    <view class='bg-red submit'>立即收藏</view>
+    <view class='bg-red submit' bindtap='getCollect'>立即收藏</view>
 </view>

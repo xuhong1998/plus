@@ -43,7 +43,7 @@
           </view>
       </view>
     </navigator>
-    <navigator url='../card/card'>
+    <navigator url='../about/about'>
       <view class="wx-item">
           <view class="wx-images">
               <image src='../../../images/home/about.png'></image>
@@ -58,7 +58,7 @@
 <view class="wx-list menu margin-top rests">
     <view class="wx-item" bindtap='CopyQQ'>
         <view class="wx-images">
-            <image src='../../../images/home/student.png'></image>
+            <image src='../../../images/home/flock.png'></image>
         </view>
         <view class="content">
             <text class="text-grey">交流群</text>
@@ -67,7 +67,7 @@
     </view>
     <view class="wx-item">
         <view class="wx-images">
-            <image src='../../../images/home/home.png'></image>
+            <image src='../../../images/home/share.png'></image>
         </view>
         <view class="content">
             <button open-type='share' class="text-grey button" >分享</button>
@@ -77,7 +77,7 @@
     </view>
     <view class="wx-item">
         <view class="wx-images">
-            <image src='../../../images/home/student.png'></image>
+            <image src='../../../images/home/give.png'></image>
         </view>
         <view class="content">
             <text class="text-grey">打赏我们</text>

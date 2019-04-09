@@ -24,7 +24,7 @@
     <view class="wx-remind-header">
         <view class="wx-remind-title">
             <text>上课提醒</text>
-            <text>3-22 周五</text>
+            <text>{{time.month}}-{{time.date}} 周{{time.day}}</text>
         </view>
         <view class="wx-remind-detail">
             <text>课程表</text>

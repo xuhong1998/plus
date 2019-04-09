@@ -1,0 +1,31 @@
+<view class="body">
+    <view class="header">
+        <view class='images'>
+          <image src='../../../images/wx.png'></image>
+          <view class='header-text'>「长大plus」2.0.0</view>
+        </view>
+        <view class="wx-p">「长大plus」小程序为长江大学大学生提供成绩查询，课表查询，图书查询等服务</view>
+    </view>
+    <view class="main">
+        <view class="list">
+            <view class="list-title">关于合作:</view>
+            <view class="list-p">「长大plus」诚挚的欢迎公众号关联小程序，并期待与您合作。（AppID：wx764aa986f9845f7b）</view>
+        </view>
+        <view class="list">
+            <view class="list-title">数据来源:</view>
+            <view class="list-p icon-yuandian iconfont">成绩，课表，考试信息数据均来自长大教务处</view>
+            <view class="list-p icon-yuandian iconfont">图书馆藏信息来自长江大学图书馆官网</view>
+            <view class="list-p icon-yuandian iconfont" >图书详细信息来自豆瓣读书</view>
+            <view class="list-p icon-yuandian iconfont">天气信息由天气API提供</view>
+        </view>
+        <view class="list">
+            <view class="list-title">技术支持</view>
+            <view class="list-p icon-yuandian iconfont">极点日历</view>
+            <view class="list-p icon-yuandian iconfont">QQ：1832277348</view>
+            <view class="list-p"></view>
+        </view>
+        <view class="list">
+            <view class="list-p">目前小程序的功能正在逐渐完善中。可能会有影响使用的BUG，如果你在使用中有任何问题，请「反馈」给我的邮箱"fugmdnw@qq.com"</view>
+        </view>
+    </view>
+</view>

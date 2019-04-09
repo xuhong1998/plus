@@ -8,12 +8,52 @@ Page({
     kind:[],
     name:[],
     value:[],
-    show:"noshow"
+    show:"noshow",
+    no:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+  setBook:function(no){
+    wx.login({
+      success(res) {
+        console.log(res.code)
+        if (res.code) {
+          wx.showToast({
+            title: '收藏中...',
+            icon: "loading",
+            duration: 10000
+          });
+          console.log(res.code)
+          wx.request({
+            url: 'https://xuchaoyang.cn/Loginweb/BookCollectServlet',
+            data: {
+              code: res.code,
+              no:no,
+              n:3
+            },
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            success: function (res) {
+                console.log(res);
+                wx.hideToast();
+                // wx.showToast({
+                //   title: '收藏成功...',
+                //   icon: "loading",
+                //   duration: 500
+                // });
+            },
+            
+          })
+        }
+      }
+    })
+  },
+  getCollect:function(e){
+    this.setBook(123455)
+  },
   onLoad: function (options) {
     this.getBook();
     this.getLibrary();
@@ -66,8 +106,8 @@ Page({
     })
   },
   setIndex:function(e){
-    wx.navigateBack({
-      url: '../../index/index',
+    wx.navigateTo({
+      url: '../collect/collect',
     })
   },
   setListbox:function(e){

@@ -7,7 +7,7 @@ Page({
   data: {
     iconList:[{
       id:"1",
-      url:"grade/landing/landing?id=1",
+      url:"",
       icon:"grade",
       name:"成绩"
     },{
@@ -22,7 +22,7 @@ Page({
       name:"图书收藏"
     },{
       id:"4",
-        url:"grade/landing/landing?id=1",
+      url:"",
       icon:" schedule",
       name:"课表"
     },{
@@ -49,7 +49,16 @@ Page({
     inform:[{
       comment:"消息",
       name:"长江大学教务小程序上线了"
-    }],
+    }, {
+        comment: "通知",
+        name: "教务处网站凌晨12点到7点关闭"
+      }, {
+        comment: "通知",
+        name: "其他功能还在开发中"
+      }, {
+        comment: "消息",
+        name: "长江大学教务小程序上线了"
+      }],
     course:[{
       day:"今天",
       time:"3-6",
@@ -79,15 +88,52 @@ Page({
       icon:"",
       color:"",
       images:""
+    },
+    time:{
+      date:10,
+      month:10,
+      day:7,
     }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  
+  getTime:function(e){
+    let time = new Date();
+    let times = {
+      date:"",
+      month:"",
+      day:"",
+    }
+    times.date = time.getDate();
+    let day;
+    switch(time.getDay()){
+      case 1: day = "一";
+              break;
+      case 2: day = "二";
+        break;
+      case 3: day = "三";
+        break;
+      case 4: day = "四";
+        break;
+      case 5: day = "五";
+        break;
+      case 6: day = "六";
+        break;
+      case 0: day = "日";
+        break;
+    }
+    times.month = time.getMonth();
+    times.day = day
+    console.log(times,times.date)
+    this.setData({
+      time:times
+    })
+  },
   onLoad: function (options) {
     this.getWeather();
+    this.getTime();
   },
   getOpenid:function(){
     var that = this;
@@ -105,15 +151,18 @@ Page({
             },
             success(e) {
               console.log(e.data)
-              if (e.data.NoState){
+              if (e.data.NoState.length == 4){
                 app.globalData.isLog = false
                 that.data.iconList[0].url = "grade/show/show";
                 that.data.iconList[3].url = "incident/course/course";
                 console.log("1")
-                that.setData({
-                  iconList: that.data.iconList
-                })
+              } else {
+                that.data.iconList[0].url = "grade/landing/landing?id=1";
+                that.data.iconList[3].url = "grade/landing/landing?id=1";
               }
+              that.setData({
+                iconList: that.data.iconList
+              })
             }
           })
         } else {
@@ -158,9 +207,10 @@ Page({
       },
       success:function(res){
         let data = res.data.data;
-        wea.temp = data.tem.substring(0,2);
-        wea.Maxtemp = data.tem1.substring(0,2);
-        wea.Mintemp = data.tem2.substring(0,2);
+        wea.temp = data.tem.replace('℃','');
+        wea.Maxtemp = data.tem1.replace('℃','');
+        wea.Mintemp = data.tem2.replace('℃','');
+        console.log(data)
         wea.site = "WuHan";
         wea.wea = data.wea;
         seteat = that.getImage(data.wea_img);

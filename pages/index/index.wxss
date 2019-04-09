@@ -12,7 +12,7 @@
   position: relative;
   transition-duration: 0s;
   width:25%;
-
+  
 }
 .wx-list.grid>.wx-item text {
   display: block;
@@ -48,10 +48,41 @@
   height: 60rpx
 }
 .inform-text{
+  overflow:hidden;
+  height:60rpx;
   line-height: 60rpx;
 }
 .inform-text view{
   width: 580rpx;
+  animation: first 20s;
+  animation-iteration-count: infinite;
+}
+@keyframes first
+{
+  0%{
+    transform:translateY(-0rpx);
+  }
+  20%{
+    transform:translateY(-0rpx);
+  }
+  25%{
+    transform:translateY(-60rpx);
+  }
+  45%{
+    transform:translateY(-60rpx);
+  }
+  50%{
+    transform:translateY(-120rpx);
+  } 
+  70%{
+    transform:translateY(-120rpx);
+  } 
+  75%{
+    transform:translateY(-180rpx);
+  } 
+  100%{
+    transform:translateY(-180rpx);
+  }
 }
 .inform-comment{
   background-color: #e54d42;
@@ -203,5 +234,4 @@
   height:25rpx;
   border:7rpx solid #fff;
   margin-bottom:6px;
-
 }

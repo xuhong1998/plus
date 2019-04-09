@@ -1,0 +1,38 @@
+page{
+  background-color:#ffffff;
+  
+}
+.body{
+  padding:50rpx 40rpx 30rpx 40rpx;
+}
+.list{
+  padding-top:30rpx;
+}
+.list-title{
+  font-size:32rpx;
+  font-weight:600;
+  line-height:50rpx;
+}
+.list-p{
+  line-height:42rpx;
+  color:#999999;
+  font-size:30rpx;
+}
+.images image{
+  width:140rpx;
+  height:140rpx;
+}
+.images{
+  text-align: center;
+}
+.header-text{
+  font-size:32rpx;
+  margin:20rpx;
+  font-weight:600;
+}
+.wx-p{
+  line-height:42rpx;
+  color:#999999;
+  font-size:30rpx;
+  margin-top:50rpx;
+}

@@ -10,7 +10,8 @@ Page({
     userid: '',
     passwd: '',
     angle: 0,
-    page:""
+    page:"",
+    isbind:false
   },
   onLoad:function(e){
     this.setData({
@@ -22,7 +23,12 @@ Page({
     wx.login({
       success(res) {
         if (res.code) {
-          console.log(res.code)
+          console.log(res.code);
+          wx.showToast({
+            title: '绑定中...',
+            icon: "loading",
+            duration: 10000
+          });
           wx.request({
             url: 'https://xuchaoyang.cn/Loginweb/BoundStuNoServlet',
             data: {
@@ -57,6 +63,9 @@ Page({
                   duration: 4000
                 })
               }
+              that.setData({
+                isbind:false
+              })
             }
           })
         } else {
@@ -83,17 +92,22 @@ Page({
     });
   },
   bind: function () {
+    if(this.data.isbind){
+      return;
+    }
     var that = this;
     if (!that.data.userid || !that.data.passwd) {
       wx.showToast({
         title: '账号及密码不能为空',
         icon: 'none',
         duration: 4000
-      })
+      });
       return;
     }
+    that.setData({
+      isbind:true
+    });
     this.getlanding(that.data.userid, that.data.passwd);
-    
   },
   useridInput: function (e) {
     this.setData({

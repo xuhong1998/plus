@@ -1,5 +1,5 @@
 <view class="wx-list menu menu-avatar">
-    <view class="wx-item item" wx:for="{{list}}">
+    <view class="wx-item item" wx:for="{{list}}" id="{{index}}"  bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd"  style="right:{{cardTeams[index].right}}rpx">
         <view class="wx-round">
             <text>{{index + 1}}</text>
         </view>
@@ -8,8 +8,9 @@
             <view class="wx-content-writer">{{item.author}}</view>
         </view>
         <view class="wx-rest">
-            <text>6</text>
+            <text>{{item.Count}}</text>
             <text>馆藏数</text>    
         </view>
+        <view class="remove" bindtap="delItem" id="{{index}}"><view>删除</view></view>
     </view>
 </view>

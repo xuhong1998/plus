@@ -66,6 +66,7 @@ page{
   color:#fff;
   border-top-left-radius:10rpx;
   border-bottom-left-radius:10rpx;
+  width:44rpx;
 }
 .wx-rest text:nth-child(2){
   border:1rpx solid #0081ff;
