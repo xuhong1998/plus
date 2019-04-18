@@ -1,0 +1,71 @@
+page{
+  background-color: #fff;
+}
+.head{
+    display: flex;
+    line-height: 90rpx;
+    box-shadow:0px 0px 10px #e2e2e2;
+}
+.head-time{
+  margin-left: 25rpx;
+}
+.weui-input{
+  width:700rpx;
+  display:flex;
+  font-size: 35rpx;
+}
+.header-title{
+  font-weight: 700;
+  flex:1
+}
+.icon-open{
+  transform:rotate(-90deg);
+}
+.exam{
+  margin-top:40rpx;
+  margin:20px 20px;
+  border-radius:6rpx;
+  box-shadow:0rpx 0rpx 10rpx #e2e2e2;
+  padding:15rpx 35rpx;
+}
+.exam-name{
+  font-size:35rpx;
+  font-weight:500;
+  line-height:60rpx;
+  letter-spacing:3rpx;
+  margin-bottom:5rpx;
+}
+.exam-rest{
+  display:inline-block;
+  width:50%;
+  margin-top:10rpx;
+  font-size:26rpx;
+  line-height:30rpx;
+  color: #aaa;
+}
+.exam-rest:nth-child(3),.exam-rest:nth-child(5),.exam-rest:nth-child(7){
+  color: #CC6600;
+}
+
+.course{
+  margin-top:40rpx;
+  margin:20px 20px;
+  border-radius:6rpx;
+  box-shadow:0rpx 0rpx 10rpx #e2e2e2;
+  padding:15rpx 35rpx;
+}
+.course-name{
+  font-size:35rpx;
+  font-weight:500;
+  line-height:60rpx;
+  letter-spacing:3rpx;
+  margin-bottom:5rpx;
+}
+.course-rest{
+  display:inline-block;
+  width:50%;
+  margin-top:10rpx;
+  font-size:26rpx;
+  line-height:30rpx;
+  color: #aaa;
+}

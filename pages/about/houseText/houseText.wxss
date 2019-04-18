@@ -1,0 +1,92 @@
+page{
+    background-color: #ffffff;
+}
+.average{
+    margin-top: 25rpx;
+    margin-left: 20rpx;
+
+}
+.average>text:first-child{
+    color: #6e6e6e;
+    line-height: 40rpx;
+    font-size:35rpx;
+    display: block;
+}
+.average>text:nth-child(2){
+    color: #2d2d2d;
+    line-height: 90rpx;
+    font-size: 50rpx;
+}
+.average>text:nth-child(2) text{
+    color: #6e6e6e;
+    line-height: 70rpx;
+    font-size:35rpx;
+}
+.message view{
+    display: inline-block;
+    margin-top: 5rpx;
+    margin-bottom: 10rpx;
+    margin-left: 20rpx;
+    width:150rpx;
+}
+.message>view:first-child{
+    width:150rpx;
+}
+.message>view:nth-child(2){
+    width: 100rpx;
+}
+.message view>text:first-child{
+    color: #6e6e6e;
+    line-height: 40rpx;
+    font-size:35rpx;
+    display: block;
+}
+.message view>text:nth-child(2){
+    color: #2d2d2d;
+    line-height:80rpx;
+    font-size: 35rpx;
+}
+.head{
+    border-bottom:#ececec 3rpx solid;
+}
+.nav view{
+    margin-left:20rpx;
+}
+.nav view>text{
+    color: #6e6e6e;
+    line-height: 70rpx;
+    font-size:35rpx;
+}
+.nav view>text:nth-child(2){
+    margin-left: 30rpx;
+}
+.navigation{
+    margin-top: 10rpx;
+    color: #6e6e6e;
+    line-height: 70rpx;
+    font-size:28rpx;
+    background-color:#f7f7f7;
+}
+.navigation text ,.setData text{
+    display: inline-block;
+    width:150rpx;
+    text-align: center;
+}
+
+.navigation text:first-child {
+    width: 120rpx;
+}
+.setData text:first-child{
+    width: 120rpx;
+}
+.navigation text:nth-child(5){
+    width: 180rpx;
+}
+.setData text:nth-child(5){
+    width: 180rpx;
+}
+.setData{
+    color: #6e6e6e;
+    line-height: 70rpx;
+    font-size:28rpx;
+}

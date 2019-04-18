@@ -7,21 +7,21 @@
   </view>
 </view>
 <view class='seek' style='display:{{show? "block":"none"}};'>
-  <view class='seek-history seek-content'>
+  <view class='seek-history seek-content' style='display:{{isHistory? "block":"none"}}'>
     <view class='seek-content-name'>搜索历史</view>
-    <view class='seek-content-list'>
-      <view class='' wx:for="{{history}}">{{item}}</view>
-    </view>
-  </view>
-  <view class='seek-history seek-content'>
-    <view class='seek-content-name'>热门搜索</view>
     <view class='seek-content-list'>
       <view class='' wx:for="{{history}}" id="{{item}}" bindtap='setNavigator'>{{item}}</view>
     </view>
   </view>
+  <view class='seek-history seek-content'  style='display:{{isHot? "block":"none"}}'>
+    <view class='seek-content-name'>热门搜索</view>
+    <view class='seek-content-list'>
+      <view class='' wx:for="{{hot}}" id="{{item}}" bindtap='setNavigator'>{{item}}</view>
+    </view>
+  </view>
 </view>
 <view class="wx-list menu menu-avatar" style='display:{{show? "none":"block"}};'>
-    <view class="wx-item item" wx:for="{{list}}" bindtap='setBook' id="{{item.no}}">
+    <view class="wx-item item" wx:for="{{list}}" bindtap='setBook' id="{{index}}">
         <view class="wx-round">
             <text>{{index + 1}}</text>
         </view>
@@ -30,8 +30,8 @@
             <view class="wx-content-writer">{{item.author}}</view>
         </view>
         <view class="wx-rest">
-            <text>{{item.Count}}</text>
-            <text>馆藏数</text>    
+            <text style='background-color:{{item.Count==0? "#aaa":"#0081ff"}};'>{{item.Count}}</text>
+            <text style='border-color:{{item.Count==0? "#aaa":"#0081ff"}};'>馆藏数</text>    
         </view>
     </view>
 </view>

@@ -1,0 +1,154 @@
+<view class='head'>
+    <view class="title">
+        <text bindtap="clickBtn" id="1">商业贷款</text>
+        <text bindtap="clickBtn" id="2">公积金</text>
+        <text bindtap="clickBtn" id="3">组合贷款</text>
+    </view>
+    <view class='solid' style="left: {{left}}rpx"></view>
+</view>
+<view class="main" bindtouchstart="touchStart" bindtouchend="touchEnd" style="transform: translateX({{percent*index}}%)">
+	<view class='tab'>
+		<form bindsubmit="back_houtai">
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">贷款金额(万元)</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" maxlength="5" type="number" bindinput="moneyInput" placeholder="请填写贷款金额" value="{{info}}"/>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">贷款年限(年)</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" maxlength="3" type="number" bindinput="yearInput" placeholder="请填写贷款年限" value="{{info}}"/>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">贷款利率(%)</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" maxlength="5" type="number" bindinput="rateInput" placeholder="4.9" value="{{info}}" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">贷款方式</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <radio-group class="weui-input" bindchange="radioChange">
+                            <label><radio id="1" checked='ture'/>等额本息</label>
+                            <label><radio id="2"/>等额本金</label>
+                        </radio-group>
+                    </view>
+                </view>
+            </view>
+        </form>
+				<button type="primary" class="button" bindtap="jumpBtn">计算</button>
+	</view>
+	<view class='tab'>
+        <form bindsubmit="back_houtai">
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">贷款金额(万元)</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" maxlength="5" type="number" bindinput="moneyInput" placeholder="请填写贷款金额" value="{{info}}"/>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">贷款年限(年)</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" maxlength="3" type="number" bindinput="yearInput" placeholder="请填写贷款年限" value="{{info}}"/>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">贷款利率(%)</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" maxlength="5" type="number" bindinput="rateInput" placeholder="3.25" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">贷款方式</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <radio-group class="weui-input" bindchange="radioChange">
+                            <label><radio id="1" checked='ture'/>等额本息</label>
+                            <label><radio id="2"/>等额本金</label>
+                        </radio-group>
+                    </view>
+                </view>
+            </view>
+        </form>
+				<button type="primary" class="button" bindtap="jumpBtn">计算</button>
+    </view>
+	<view class='tab'>
+        <form bindsubmit="back_houtai">
+            <view class="weui-cells weui-cells_after-title width">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">公积金贷款金额(万元)</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" maxlength="5" type="number" name="findMoney" placeholder="请填写贷款金额" value="{{info}}"/>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">公积金贷款利率(%)</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" maxlength="5" type="number"name="findRate" placeholder="3.25" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">商业贷款金额(万元)</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" maxlength="5" type="number" name="money" placeholder="请填写贷款金额" value="{{info}}"/>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">商业贷款利率(%)</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" maxlength="5" type="number" name="rate" placeholder="3.25" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">贷款年限(年)</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" maxlength="3" type="number" name="year" placeholder="请填写贷款年限" value="{{info}}"/>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">贷款方式</view>
+                    </view>
+                    <view class="weui-cell__bd" >
+                        <radio-group class="weui-input" bindchange="findSelect">
+                            <label><radio id="1" checked='ture'/>等额本息</label>
+                            <label><radio id="2"/>等额本金</label>
+                        </radio-group>
+                    </view>
+                </view>
+            </view>
+            <button type="primary" class="button" bindtap="findBtn"  formType="submit">计算</button>
+        </form>
+
+    </view>
+
+</view>

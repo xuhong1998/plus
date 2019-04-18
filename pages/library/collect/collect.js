@@ -1,5 +1,5 @@
 // pages/library/collect/collect.js
-var startX, startY, key, endX, endY, maxRight = 100;
+var startX, startY, key, endX, endY, maxRight = 163;
 Page({
 
   /**
@@ -191,6 +191,19 @@ Page({
           })
         }
       }
+    })
+  },
+  setBook: function (e) {
+    let isbn = "";
+    console.log(this.data.list)
+    if (this.data.list[e.currentTarget.id].isbn == "" || this.data.list[e.currentTarget.id].isbn == undefined) {
+      isbn = "0";
+    } else {
+      isbn = this.data.list[e.currentTarget.id].isbn
+    }
+    console.log(this.data.list[e.currentTarget.id].isbn, this.data.list[e.currentTarget.id].no)
+    wx.navigateTo({
+      url: '../detail/detail?no=' + this.data.list[e.currentTarget.id].no + '&isbn=' + isbn
     })
   },
   /**

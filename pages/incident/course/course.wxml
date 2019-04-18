@@ -1,12 +1,18 @@
 <view class="wx-list background">
-    <view class="wx-class-name">第5周</view>
+    <picker bindchange="bindPickerChange" value="{{week}}" range="{{array}}">
+        <view class="weui-input"  class="wx-class-name">{{array[week]}}<text class='iconfont icon-open' ></text></view>
+    </picker>
     <view class=""></view>
 </view>
 <view class='wx-week background'>
-  <view class='wx-week-num'>5</view>
-  <view class="wx-week-day" wx:for="{{['一','二','三','四','五']}}">
+<picker bindchange="bindPickerChange" value="{{week}}" range="{{array}}">
+        <view class="wx-class-name wx-week-num">{{array[week]}}
+          <!-- <text class='iconfont icon-open' ></text> -->
+        </view>
+    </picker>
+  <view class="wx-week-day" wx:for="{{['一','二','三','四','五']}}" style="border-bottom:{{index == several?  '#39b54a 5rpx solid':''}};color:{{index == several? '#39b54a':'' }}">
       <view>周{{item}}</view>
-      <view>10.26</view>
+      <view style="color:{{index == several? '#39b54a':'' }}">{{weekArray[index]}}</view>
   </view>
 </view>
 <scroll-view class='tab-scroll' scrolly-y="true">
@@ -19,8 +25,12 @@
           </view>
         </view>
         <view wx:for="{{wlist}}">
-          <view class="flex-item kcb-item {{colorArrays[index%9]}} light" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*px + 4}}rpx;margin-top:{{(item.skjc-1)*120+5}}rpx;height:{{item.skcd*120-5}}rpx;">
-            <view class="smalltext" >{{item.kcmc}}</view>
+          <view class="flex-item kcb-item {{colorArrays[index%9]}} light" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.index[0].week)*px + 4}}rpx;margin-top:{{(item.index[0].section)*240+5}}rpx;height:{{2*120-5}}rpx;">
+            <view class='content'>
+                <view class="smalltext" >{{item.className}}</view>
+                <view class="smalltext">{{item.teacher}}</view>
+                <view class='smalltext'>{{item.place}}</view>
+            </view>
           </view>
         </view>
     </view>

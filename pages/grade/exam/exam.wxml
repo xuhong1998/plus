@@ -1,0 +1,30 @@
+<view class="head wx-head">
+    <view class="head-time">
+        <picker bindchange="bindPickerChange" bindtap='getRotate' value="{{index}}" range="{{array}}">
+            <view class="weui-input"><view class='header-title'>{{array[index]}}</view><text class='iconfont icon-open {{rotate}}' ></text></view>
+        </picker>
+    </view>
+</view>
+
+<view class="exam" wx:for="{{exam}}" style="display:{{show == 1? 'none':''}}">
+    <view class="exam-main">
+        <view class="exam-name">{{item.ExamName}}</view>
+        <view class="exam-rest">考试类别：{{item.ExamType}}</view>
+        <viee class="exam-rest">考试形式：{{item.ExamForm}}</viee>
+        <view class="exam-rest">考试情况：{{item.ExamSituation}}</view>
+        <viee class="exam-rest">考试日期：{{item.ExamDate}}</viee>
+        <view class="exam-rest">考试安排：{{item.ExamSchedule}}</view>
+        <viee class="exam-rest">考试地点：{{item.ExamPlace}}</viee>
+    </view>
+</view>
+
+
+<view class="course" wx:for="{{course}}"  style="display:{{show == 0? 'none':''}}">
+    <view class="course-main">
+        <view class="course-name">{{item.CourseName}}</view>
+        <view class="course-rest">课程序号：{{item.CourseNumber}}</view>
+        <viee class="course-rest">课程类别：{{item.CourseType}}</viee>
+        <view class="course-rest">课程学分：{{item.Credit}}</view>
+        <viee class="course-rest">开课院系：{{item.Faculty}}</viee>
+    </view>
+</view>

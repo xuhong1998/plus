@@ -36,18 +36,10 @@
   line-height:39rpx;
   margin-bottom:2rpx;
 }
-.wx-week-day:nth-child(2) view:nth-child(2){
-  color: #39b54a;
-}
 .wx-course{
   border-bottom:#e7ebed dashed 3rpx;
-
   height: 100rpx;
   display:  flex;
-}
-.wx-week .wx-week-day:nth-child(2){
-  border-bottom:#39b54a 5rpx solid;
-  color:#39b54a;
 }
 .wx-course-time{
 
@@ -95,13 +87,11 @@
 .kcb-item {
   position: absolute;
   justify-content: center;
-  display: flex;
   align-items: center;
+  display: flex;
   border-radius: 4px;
   color:#fff;
-}
-.smalltext{
-  padding: 20rpx;
+  text-align: center;
 }
 .wx-week-num{
   justify-content:center;
@@ -111,5 +101,7 @@
   font-size:70rpx;
   color:#39b54a;
   font-weight:700;
-
+}
+.smalltext:nth-child(2){
+  padding: 10rpx 0rpx;
 }

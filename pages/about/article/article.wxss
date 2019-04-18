@@ -1,0 +1,28 @@
+page{
+  background-color: #fff;
+}
+.wxParse-h1,.wxParse-h2,.wxParse-h3,.wxParse-h4{
+  text-align:center;
+  font-size:43rpx;
+  font-weight:900;
+}
+.wxParse-form{
+  padding:0rpx 35rpx;
+  padding-bottom: 150rpx;
+}
+.wxParse-p{
+  margin-bottom:5rpx;
+  font-size:15px;
+  line-height:1.8;
+
+}
+.wxParse-script{
+  display: none;
+}
+.detail_news_head .wxParse-p{
+  text-align: center;
+}
+.wxParse-style{
+  display: none;
+}
+@import "../../../wxParse/wxParse.wxss";

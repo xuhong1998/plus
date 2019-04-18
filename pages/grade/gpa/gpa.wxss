@@ -1,0 +1,202 @@
+page{
+    background-color:#fff;
+}
+page{
+  background-color:#fff;
+}
+.data{
+    display: flex;
+}
+.data-adj{
+    width: 70rpx;
+}
+.grade{
+    display: flex;
+    flex: 1;
+}
+.grade-column{
+    font-size:32rpx;
+}
+.grade-rum{
+    margin-top: 8rpx;
+    font-size: 25rpx;
+    line-height: 30rpx;
+    margin-bottom:20rpx;
+}
+.grade-rum text{
+    margin-right: 28rpx;
+    color: #8a8a8a;
+}
+.data-score{
+  margin:auto;
+  text-align:right;
+  font-size:42rpx;
+  margin-right:17rpx;
+}
+.content{
+  padding: 0rpx 30rpx;
+}
+.grade-title{
+  flex: 1;
+  margin-top: 20rpx;
+}
+.switch{
+  margin: auto;
+}
+.foot{
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: 110rpx;
+  display: flex;
+}
+.foot-left{
+  width: 540rpx;
+  background-color: #fff;
+  display: flex;
+}
+.foot-right{
+  text-align: center;
+  background-color: #e54d42;
+  color: #fff;
+  line-height: 110rpx;
+  flex:1;
+  font-size: 30rpx;
+}
+
+.grade-radio {
+  width:50rpx;
+  height:50rpx;
+  margin:auto;
+  border:2rpx solid #aaa;
+  border-radius:50%;
+  margin-right:20rpx;
+  text-align:center;
+}
+.grade-radio.checked{
+  background-color: #0081ff;
+  border: none;
+}
+.foot-left .oot-radio{
+  margin-left:16px;
+  line-height:110rpx;
+  font-size:38rpx;
+}
+.foot-left .foot-total{
+  margin-left:167rpx;
+  line-height:110rpx;
+  font-size:38rpx;
+}
+.foot-left .foot-total text{
+  color: #e54d42;
+  font-size: 42rpx;
+  margin-left: 7rpx;
+}
+.grade-radio .icon-correct{
+  line-height:43rpx;
+  font-weight:900;
+  color:#fff;
+  flex:1;
+}
+.foot-radio{
+  display: flex;
+  line-height: 110rpx;
+  margin-left: 30rpx;
+}
+.control{
+  background-color: #0081ff;
+}
+.foot-radio .grade-radio {
+  display: flex
+}
+.wx-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1110;
+  opacity: 0;
+  outline: 0;
+  text-align: center;
+  -ms-transform: scale(1.185);
+  transform: scale(1.185);
+  backface-visibility: hidden;
+  perspective: 2000rpx;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out 0s;
+  pointer-events: none;
+  
+}
+.wx-dialog {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  width: 680rpx;
+  max-width: 100%;
+  background-color: #f8f8f8;
+  border-radius: 10rpx;
+  overflow: hidden;
+  top: 170rpx;
+}
+
+.wx-modal.show {
+  opacity: 1;
+  transition-duration: 0.3s;
+  -ms-transform: scale(1);
+  transform: scale(1);
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: auto;
+}
+.justify-end{
+  width: 100%;
+  height: 80rpx;
+  background-color:#fff;
+  justify-content:flex-end;
+  display:flex;
+  position:relative;
+  align-items:center;
+}
+.action {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  max-width: 100%;
+  margin-right:20rpx;
+}
+.modal-name{
+  font-size:80rpx;
+  font-weight:100;
+  margin-top:30rpx;
+  color:#1cbbb4;
+}
+.modal-total{
+  font-size: 25rpx;
+}
+.list{
+  display: flex;
+  margin-top:20rpx;
+}
+.list text:nth-child(1){
+  line-height:43rpx;
+  font-size:28rpx;
+  flex:1;
+  text-align:left;
+}
+.list text:nth-child(2){
+  color:#8d93cd;
+}
+.modal-list{
+  margin:50rpx 35rpx 50rpx 35rpx;
+}
+.icon-yuandian::before{
+  color: #8d93cd;
+}
+.isshow{
+  display: none
+}

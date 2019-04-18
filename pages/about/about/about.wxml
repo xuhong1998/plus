@@ -21,6 +21,7 @@
         <view class="list">
             <view class="list-title">技术支持</view>
             <view class="list-p icon-yuandian iconfont">极点日历</view>
+            <view class="list-p icon-yuandian iconfont">wxParse</view>
             <view class="list-p icon-yuandian iconfont">QQ：1832277348</view>
             <view class="list-p"></view>
         </view>

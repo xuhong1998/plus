@@ -1,0 +1,99 @@
+@import "../../../weui.wxss";
+page{
+    background-color:#f4f4f4 ;
+    margin: 0rpx;
+}
+.head{
+    height: 100rpx;
+    width: 750rpx;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 3vh;
+}
+.weui-label{
+	width: 250rpx;
+}
+.width .weui-label{
+    width: 340rpx;
+}
+.title{
+	position: relative;
+}
+.title text{
+    display: inline-block;
+    width: 250rpx;
+    text-align: center;
+		line-height: 90rpx;
+		height: 90rpx;
+}
+.solid{
+    height: 10rpx;
+    width: 250rpx;
+    background-color: #1aad19;
+    position: absolute;
+    top:90rpx;
+    left: 0rpx;
+    transition:.3s;
+}
+.main{
+	height: 90vh;
+	width: 2250rpx;
+	translate: .3s;
+}
+.tab{
+    width: 750rpx;
+    height: 100%;
+    float: left;
+    margin-top: 50rpx;
+}
+.text{
+    height: 120rpx;
+    width: 750rpx;
+    border-bottom:#dadada 5rpx solid ;
+    background-color: #ffffff;
+}
+.text text{
+    line-height: 120rpx;
+    color: #666666;
+    font-size: 30rpx;
+    margin-left: 40rpx;
+}
+.input{
+    display: inline-block;
+    float: right;
+    margin-right: 30rpx;
+    margin-top: 32.5rpx;
+    border: #dadada 5rpx solid;
+    height: 50rpx;
+    width: 300rpx;
+    border-radius: 16rpx;
+}
+.input input{
+    margin-left: 10rpx;
+    line-height: 50rpx;
+    font-size: 27rpx;
+}
+.select{
+    display: inline-block;
+    float: right;
+    margin-right: 30rpx;
+    margin-top: 32.5rpx;
+    border: #000000 3rpx solid;
+    height: 50rpx;
+    width: 300rpx;
+    border-radius: 16rpx;
+}
+.select view{
+    display: inline-block;
+    width: 150rpx;
+    color: #000000;
+    line-height: 50rpx;
+    font-size: 27rpx;
+    text-align: center;
+}
+.button{
+    margin-top: 40rpx;
+    margin-left: 70rpx;
+    margin-right: 70rpx;
+    background-color: #ffa127;
+}

@@ -1,11 +1,14 @@
 // pages/about/home/home.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    view:1,
+    name:"",
+    no:""
   },
 
   /**
@@ -23,7 +26,7 @@ Page({
   },
   CopyLink:function(){
     wx.setClipboardData({
-      data: '111100',
+      data: 'https://github.com/xuhong1998/plus',
       success:res =>{
         wx.showToast({
           title: '已复制',
@@ -47,7 +50,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log(app.globalData.stuName)
+    if (app.globalData.stuName.length > 1){
+      this.setData({
+        view:2,
+        name:app.globalData.stuName,
+        no: app.globalData.stuNo
+      })
+    }
   },
 
   /**

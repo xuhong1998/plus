@@ -1,4 +1,4 @@
- .wx-list.grid.no-border {
+.wx-list.grid.no-border {
   padding: 20rpx 10rpx;
 }
 .wx-list.grid.no-border>.wx-item {
@@ -54,7 +54,9 @@
 }
 .inform-text view{
   width: 580rpx;
-  animation: first 20s;
+  height: 60rpx;
+  line-height: 60rpx;
+  animation: first 10s;
   animation-iteration-count: infinite;
 }
 @keyframes first
@@ -62,22 +64,22 @@
   0%{
     transform:translateY(-0rpx);
   }
-  20%{
+  26%{
     transform:translateY(-0rpx);
   }
-  25%{
+  32%{
     transform:translateY(-60rpx);
   }
-  45%{
+  57%{
     transform:translateY(-60rpx);
   }
-  50%{
+  63%{
     transform:translateY(-120rpx);
   } 
-  70%{
+  88%{
     transform:translateY(-120rpx);
   } 
-  75%{
+  95%{
     transform:translateY(-180rpx);
   } 
   100%{
@@ -179,12 +181,11 @@
 }
 
 .wx-class-title text:nth-child(1){
-  width:350rpx;
+  width:320rpx;
   font-size:32rpx;
 
 }
 .wx-class-title text:nth-child(2){
-  
 }
 .weather image{
   width:750rpx;
@@ -234,4 +235,14 @@
   height:25rpx;
   border:7rpx solid #fff;
   margin-bottom:6px;
+}
+.show{
+  display: none;
+}
+
+.wx-isclass{
+  text-align:center;
+  font-size:40rpx;
+  color:#1cbbb4;
+  margin-top:30rpx;
 }

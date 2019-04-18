@@ -1,5 +1,5 @@
 <view class="wx-list menu menu-avatar">
-    <view class="wx-item item" wx:for="{{list}}" id="{{index}}"  bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd"  style="right:{{cardTeams[index].right}}rpx">
+    <view class="wx-item item" wx:for="{{list}}" id="{{index}}"  bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd"  style="right:{{cardTeams[index].right}}rpx" bindtap='setBook' id="{{index}}">
         <view class="wx-round">
             <text>{{index + 1}}</text>
         </view>

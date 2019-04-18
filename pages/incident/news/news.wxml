@@ -1,0 +1,60 @@
+<swiper class="screen-swiper square-dot {{show}}" indicator-dots="true" circular="true" autoplay="true" interval="4000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key>
+    <image src="{{item.image}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    <video src="{{item.image}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+  </swiper-item>
+</swiper>
+<view class='wx-remind margin-top background {{show}}'>
+  <view class="wx-remind-header">
+    <view class=' wx-bar wx-item-head'>
+        <view class='wx-item-left'>本校新闻</view>
+    </view>
+  </view>
+  <view class="wx-remind-body margin-top">
+    <view class="wx-remind-class  margin-top" bindtap='setClass' wx:for="{{news}}" id="{{item.url}}">
+        <view class="wx-class-image">
+          <image src="{{item.image}}"></image>
+        </view>
+      <view class="wx-class-title">
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='wx-remind margin-top background {{show}}'>
+  <view class="wx-remind-header">
+    <view class=' wx-bar wx-item-head'>
+        <view class='wx-item-left'>学术动态</view>
+    </view>
+  </view>
+  <view class="wx-remind-body margin-top">
+    <view class="wx-remind-class  margin-top" bindtap='setClass' wx:for="{{academic}}" id="{{item.url}}">
+        <view class="wx-class-tiem">
+          <view class='time-date'>{{item.Date}}</view>
+          <view class='time-day'>{{item.time}}</view>
+        </view>
+      <view class="class-title">
+        <view>{{item.title}}</view>
+        <view>{{item.rapporteur}}</view>
+        <view>{{item.place}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='wx-remind margin-top background {{show}}'>
+  <view class="wx-remind-header">
+    <view class=' wx-bar wx-item-head'>
+        <view class='wx-item-left'>通知通告</view>
+    </view>
+  </view>
+  <view class="wx-remind-body margin-top">
+    <view class="wx-remind-class  margin-top" bindtap='setClass' wx:for="{{JaoWu}}" id="{{item.url}}">
+        <view class="inform-name icon-yuandian iconfont">
+        {{item.title}}
+        </view>
+        <view class="inform-time">
+        </view>
+    </view>
+  </view>
+</view>

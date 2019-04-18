@@ -1,0 +1,114 @@
+.screen-swiper {
+ /* // min-height: 375rpx; */
+}
+.show{
+  display: none
+}
+page{
+  margin-bottom: 20rpx;
+}
+.screen-swiper image{
+  width:100%;
+  display:block;
+  height:100%;
+  margin:0;
+  pointer-events:none;
+}
+swiper.square-dot .wx-swiper-dot {
+  background: #fff;
+  opacity: 0.4;
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 20rpx;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+swiper.square-dot .wx-swiper-dot.wx-swiper-dot-active {
+  opacity: 1;
+  width: 30rpx;
+}
+.wx-class-image image{
+  width:240rpx;
+  height:150rpx;
+  margin-right:20rpx;
+  border-radius:6rpx;
+}
+.wx-remind-class{
+  padding:0rpx 35rpx;
+  display: flex;
+}
+.wx-class-title{
+  font-size:30rpx;
+  color:#888;
+  overflow:hidden;
+  letter-spacing:4rpx;
+  line-height:46rpx;
+}
+.wx-remind{
+  padding-bottom: 30rpx;
+}
+.wx-bar.wx-item-head{
+  border:none
+}
+.wx-class-tiem{
+  width: 160rpx;
+  text-align: center;
+  margin-right:30rpx;
+  flex: 1;
+}
+.wx-class-tiem view:nth-child(1){
+  background-color: #1cbbb4;
+  color: #fff;
+  height: 70rpx;
+  line-height:70rpx;
+}
+.wx-class-tiem view:nth-child(1){
+  background-color: #1cbbb4;
+  color: #fff;
+  height: 70rpx;
+  line-height:70rpx;
+  border-top-right-radius:15rpx;
+  border-top-left-radius:15rpx;
+  font-size:30rpx;
+  
+}
+.wx-class-tiem view:nth-child(2){
+  border: 2rpx solid #1cbbb4;
+  height: 80rpx;
+  line-height:80rpx;
+  font-size:40rpx;
+  border-bottom-right-radius:15rpx;
+  border-bottom-left-radius:15rpx;
+}
+.class-title{
+  margin-top: 5rpx;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+  width:500rpx;
+}
+.class-title view:nth-child(1){
+  font-size: 30rpx;
+}
+.class-title view:nth-child(2){
+  font-size: 24rpx;
+  line-height:60rpx;
+  color: #888;
+}
+.class-title view:nth-child(3){
+  font-size: 24rpx;
+  color: #888;
+}
+.inform-name{
+  width: 630rpx;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+  line-height: 65rpx;
+}
+.inform-time{
+  flex:1;
+  text-align:right;
+  color: #888;
+  line-height: 65rpx;
+}

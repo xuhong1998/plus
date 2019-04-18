@@ -2,8 +2,8 @@
 <view class='wx-time margin-top'>
     <view class='wx-time-head wx-bar wx-item-head'>
         <view class='wx-item-left'>倒计日</view>
-        <view>添加</view>
-        <view class='iconfont icon-tianjia'></view>
+        <!-- <view>添加</view>
+        <view class='iconfont icon-tianjia'></view> -->
     </view>
     <view class="wx-time-body">
         <view class="wx-box" wx:for="{{list}}">

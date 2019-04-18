@@ -13,7 +13,8 @@ Page({
         AverageScorePoint:"",
         color:[],
         user:"",
-        passward:""
+        passward:"",
+        show:"show"
     },
       bindPickerChange(e) {
         let color = [];
@@ -55,7 +56,7 @@ Page({
 
     },
     HttpRequest:function(user,passward){
-      let ScoreList = [], Project = [], data = [],array= [],color = [];
+      let ScoreList = [], Project = [], data = [], array = [], color = [],semester = [];
       let that = this;
       wx.showToast({
         title: '加载中...',
@@ -82,9 +83,17 @@ Page({
                 res.data.data.Project.shift();
                 ScoreList = res.data.data.ScoreList;
                 Project = res.data.data.Project;
+                for(let i in Project){
+                  if (Project[i].Semester == 1){
+                    semester.push("上学期");
+                  }
+                  if (Project[i].Semester == 2) {
+                    semester.push("下学期");
+                  }
+                }
                 for (let i = 0; i < Project.length; i++) {
                   data[i] = [];
-                  array.push(Project[i].SchoolYear + ' ' + Project[i].Semester)
+                  array.push(Project[i].SchoolYear + ' ' + semester[i])
                   for (let j = 0; j < ScoreList.length; j++) {
                     if (Project[i].SchoolYear + ' ' + Project[i].Semester == ScoreList[j].AcademicYear) {
                       data[i].push(ScoreList[j])
@@ -115,7 +124,7 @@ Page({
                   TotalCredit: Project[Project.length - 1].TotalCredit,
                   AverageScorePoint: Project[Project.length - 1].AverageScorePoint,
                   color: color,
-
+                  show:"",
                 })
               }
             })

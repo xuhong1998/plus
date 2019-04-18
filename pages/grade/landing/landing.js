@@ -10,13 +10,16 @@ Page({
     userid: '',
     passwd: '',
     angle: 0,
-    page:"",
+    page:0,
     isbind:false
   },
   onLoad:function(e){
-    this.setData({
-      page:e.id
-    })
+    if(e.id != null){
+      this.setData({
+        page: e.id
+      })
+    }
+    
   },
   getlanding:function (userName, userpassword){
     let that = this;
@@ -40,15 +43,40 @@ Page({
               'content-type': 'application/json' // 默认值
             },
             success(e) {
+              that.setData({
+                isbind: false
+              })
+              console.log(e);
+              if(e.data.state.length == 5){
+                wx.showToast({
+                  title: '账户或密码错误',
+                  icon: 'success',
+                  image:'../../../images/loser.png',
+                  duration: 4000
+                })
+                return;
+              }
+              console.log(e)
+              app.globalData.isLogin = true;
               if(e.data.state){
                 if (that.data.page == 1) {
-                  wx.navigateTo({
+                  wx.redirectTo({
                     url: '../show/show',
                   })
                 }
                 if (that.data.page == 2) {
-                  wx.navigateTo({
+                  wx.redirectTo({
                     url: '../../incident/course/course',
+                  })
+                }
+                if (that.data.page == 3) {
+                  wx.redirectTo({
+                    url: '../gpa/gpa',
+                  })
+                }
+                if (that.data.page == 4) {
+                  wx.redirectTo({
+                    url: '../exam/exa',
                   })
                 }
                 wx.showToast({
@@ -63,9 +91,7 @@ Page({
                   duration: 4000
                 })
               }
-              that.setData({
-                isbind:false
-              })
+              
             }
           })
         } else {

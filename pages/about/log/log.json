@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "版本日志",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
 }

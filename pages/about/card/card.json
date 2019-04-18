@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "首页卡片",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
 }

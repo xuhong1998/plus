@@ -53,3 +53,38 @@
 .button::after {
   border: none;
 }
+.user-img{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  justify-content: center;
+  margin-bottom: 40rpx;
+  border:20rpx solid #5ab1ff;
+}
+.header{
+  background-color: #118ffe;
+  background-size:cover;
+  height:400rpx;
+  display:flex;
+  justify-content:center;
+  overflow:hidden;
+  position:relative;
+  flex-direction:column;
+  align-items:center;
+  color:#fff;
+  font-weight:300;
+  text-shadow:0 0 3px rgba(0, 0, 0, 0.3);
+  padding-bottom:50rpx;
+}
+.user-name{
+  text-align:center;
+  font-size:37rpx;
+  font-weight:600;
+}
+.student{
+  text-align: 500;
+}
+.rests{
+  margin-bottom: 100rpx;
+}

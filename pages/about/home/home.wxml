@@ -1,3 +1,15 @@
+<view class="header">
+    <view class='user-img'>
+        <open-data   type="userAvatarUrl"></open-data>
+    </view>
+    <view class='user-name'  wx:if="{{view == '1'}}">
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+    <view class='user-name'  wx:elif="{{view == '2'}}">
+        <view>{{name}}</view>
+        <view class='student'>{{no}}</view>
+    </view>
+</view>
 <view class="wx-list menu margin-top">
     <navigator url='../card/card'>
       <view class="wx-item">
@@ -32,13 +44,24 @@
           </view>
       </view>
     </navigator>
-    <navigator>
+    <navigator bindtap='CopyLink'>
       <view class="wx-item">
-          <view class="wx-images" bindtap='CopyLink'>
+          <view class="wx-images">
               <image src='../../../images/home/github.png'></image>
           </view>
           <view class="content">
               <text class="text-grey">GitHub</text>
+              <text class="iconfont icon-arrow-right-copy-copy-copy"></text>
+          </view>
+      </view>
+    </navigator>
+    <navigator url='../house/house'>
+      <view class="wx-item">
+          <view class="wx-images">
+              <image src='../../../images/home/house.png'></image>
+          </view>
+          <view class="content">
+              <text class="text-grey">房贷计算</text>
               <text class="iconfont icon-arrow-right-copy-copy-copy"></text>
           </view>
       </view>
@@ -75,7 +98,7 @@
             <text class="iconfont icon-arrow-right-copy-copy-copy"></text>
         </view>
     </view>
-    <view class="wx-item">
+    <!-- <view class="wx-item">
         <view class="wx-images">
             <image src='../../../images/home/give.png'></image>
         </view>
@@ -83,5 +106,5 @@
             <text class="text-grey">打赏我们</text>
             <text class="iconfont icon-arrow-right-copy-copy-copy"></text>
         </view>
-    </view>
+    </view> -->
 </view>

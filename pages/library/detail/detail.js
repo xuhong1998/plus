@@ -7,9 +7,15 @@ Page({
     collection:[],
     kind:[],
     name:[],
+    isName:[],
     value:[],
+    isValue:[],
     show:"noshow",
-    no:""
+    no:"",
+    isbn:"",
+    nameShow:"",
+    image:"",
+    bookName:""
   },
 
   /**
@@ -44,36 +50,74 @@ Page({
                 //   icon: "loading",
                 //   duration: 500
                 // });
-            },
-            
+            },          
           })
         }
       }
     })
   },
   getCollect:function(e){
-    this.setBook(123455)
+    this.setBook(this.data.no)
   },
   onLoad: function (options) {
-    this.getBook();
+    console.log(options.no,options.isbn)
+    this.setData({
+      no: options.no,
+      isbn: options.isbn
+    })
     this.getLibrary();
+
   },
   getBook:function(){
     let kind = [], that = this, name = [], value = [];
+    console.log("https://xuchaoyang.cn/Loginweb/DouBanServlet?isbn=" + that.data.isbn)
     wx.showToast({
       title: '加载中...',
       icon: "loading",
       duration: 10000
     });
     wx.request({
-      url: 'https://xuchaoyang.cn/Loginweb/DouBanServlet?No=30397063',
-      data: {},
+      url: 'https://xuchaoyang.cn/Loginweb/DouBanServlet',
+      data: {
+        isbn:that.data.isbn
+      },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
         wx.hideToast();
-        console.log(res.data.info.name);
+        if(res.data.state.length == 5){
+          kind = {
+            bookName: that.data.bookName,
+            image: that.data.image
+          }
+          that.setData({
+            name:that.data.isName,
+            value:that.data.isValue,
+            show: "",
+            nameShow:"noshow",
+            kind:kind
+          })
+          console.log(that.data.isName,that.data.isValue)
+          return;
+        }
+        if (that.data.isbn.replace(/-/g, "") != res.data.info.value[res.data.info.value.length - 1]) {
+          console.log(1);
+          kind = {
+            bookName: that.data.bookName,
+            image: that.data.image
+          }
+          that.setData({
+            name: that.data.isName,
+            value: that.data.isValue,
+            show: "",
+            nameShow: "noshow",
+            kind: kind
+          })
+          console.log(that.data.isName, that.data.isValue)
+          return;
+        }
+        console.log(res.data);
         kind = res.data;
         name = res.data.info.name;
         value = res.data.info.value
@@ -91,7 +135,7 @@ Page({
     wx.request({
       url: 'https://xuchaoyang.cn/Loginweb/BookInfoServlet',
       data:{
-        no:123
+        no:that.data.no
       },
       header: {
         'content-type': 'application/json' // 默认值
@@ -99,9 +143,14 @@ Page({
       success:function(res){
         collection = res.data.collection;
         that.setData({
-          collection:collection
+          collection:collection,
+          isName:res.data.bookinfo.name,
+          isValue:res.data.bookinfo.value,
+          image:res.data.image,
+          bookName:res.data.bookinfo.bookName
         })
         console.log(collection)
+        that.getBook();  
       }
     })
   },

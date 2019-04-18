@@ -42,10 +42,10 @@
         <view class='wx-item-left'>本书简介</view>
   </view>
   <view class='wx-book-body'>
-    <view class='wx-book-name'>内容简介</view>
-    <view class='wx-boot-text'>{{kind.contentValidity}}</view>
-    <view class='wx-book-name'>作者简介</view>
-    <view class='wx-boot-text'>{{kind.AuthorBriefIntroduction}}</view>
+    <view class='wx-book-name  {{nameShow}}'>内容简介</view>
+    <view class='wx-boot-text  {{nameShow}}'>{{kind.contentValidity}}</view>
+    <view class='wx-book-name  {{nameShow}}'>作者简介</view>
+    <view class='wx-boot-text  {{nameShow}}'>{{kind.AuthorBriefIntroduction}}</view>
   </view>
 </view>
 <view class="wx-bar bg-white tabbar border {{show}}">

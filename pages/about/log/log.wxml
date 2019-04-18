@@ -3,7 +3,7 @@
         <view class="content">
             <view class="cu-capsule radius">
                 <view class="cu-tag wx-white">v2.0.1</view>
-                <view class="cu-tag line-white">2019/04/06</view>
+                <view class="cu-tag line-white">2019/04/16</view>
             </view>
             <view class="text-content">
                 <view>1.第一个正式版本上线</view>
@@ -13,7 +13,8 @@
                 <view>5.课表查询功能</view>
                 <view>6.校历查询功能</view>
                 <view>7.考试查询功能</view>
-                <view>8.对前端代码第一次重构，修改了大部分界面的ui</view>
+                <view>8.学校新闻</view>
+                <view>9.对前端代码第一次重构，修改了大部分界面的ui</view>
             </view>
         </view>
     </view>

@@ -1,0 +1,101 @@
+<view class="main {{show}}">
+    <view class="content">
+        <view class="content-title">必修</view>
+        <view class="content-body" wx:for="{{required}}" bindtap='click' id="{{item.id}}">
+            <view class="data">
+                <view class="grade ">
+                    <view class='grade-radio {{ScoreList[item.id].style}}'>
+                      <text class='iconfont icon-correct'></text>
+                    </view>
+                    <view class="grade-title">
+                        <view class="grade-column">{{item.CourseTitle}}</view>
+                        <view class="grade-rum">
+                            <text>学分:{{item.credit}}</text>
+                            <text>绩点:{{item.AchievementPoint}}</text>
+                        </view>
+                    </view>
+                    <view class="data-score" style='color:{{item.color}}'>{{item.score}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="content-title">选修</view>
+        <view class="content-body" wx:for="{{optional}}" bindtap='click' id="{{item.id}}">
+            <view class="data">
+                <view class="grade">
+                     <view class='grade-radio {{ScoreList[item.id].style}}'>
+                      <text class='iconfont icon-correct'></text>
+                    </view>
+                    <view class="grade-title">
+                        <view class="grade-column">{{item.CourseTitle}}</view>
+                        <view class="grade-rum">
+                            <text>学分:{{item.credit}}</text>
+                            <text>绩点:{{item.AchievementPoint}}</text>
+                        </view>
+                    </view>
+                    <view class="data-score"  style='color:{{item.color}}'>{{item.score}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="content-title">其他</view>
+        <view class="content-body" wx:for="{{rests}}" bindtap='click' id="{{item.id}}">
+            <view class="data">
+                <view class="grade">
+                     <view class='grade-radio {{ScoreList[item.id].style}}'>
+                      <text class='iconfont icon-correct'></text>
+                    </view>
+                    <view class="grade-title">
+                        <view class="grade-column">{{item.CourseTitle}}</view>
+                        <view class="grade-rum">
+                            <text>学分:{{item.credit}}</text>
+                            <text>绩点:{{item.AchievementPoint}}</text>
+                        </view>
+                    </view>
+                    <view class="data-score" style='color:{{item.color}}'>{{item.score}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='foot {{show}}'>
+    <view class="foot-left">
+        <view class='foot-radio' bindtap='setControl'>
+            <view class='grade-radio {{control.style}}'>
+                <text class='iconfont icon-correct'></text>
+            </view>
+            全选
+        </view>
+        <view class='foot-total'>合计：<text>{{total}}</text></view>
+    </view>
+    <view class="foot-right" bindtap='getCount'>计算绩点</view>
+</view>
+<view class="wx-modal {{modalName}}">
+  <view class="wx-dialog">
+     <view class="justify-end">
+      <view class="action" bindtap="hideModal">
+        <text class="iconfont icon-error"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      <view class='modal-name'>{{data.gpa}}</view>
+      <view class='modal-total'>共选择{{total}}门课</view>
+      <view class="modal-list">
+        <view class="list">
+          <text class=' icon-yuandian iconfont'>总学分</text>
+          <text>{{data.score}}</text>
+        </view>
+        <view class="list">
+          <text class=' icon-yuandian iconfont'>平均成绩</text>
+          <text>{{data.credit}}</text>
+        </view>
+        <view class="list">
+          <text class=' icon-yuandian iconfont'>必修绩点</text>
+          <text>{{data.sumGpa}}</text>
+        </view>
+        <view class="list">
+          <text class=' icon-yuandian iconfont'>必修总学分</text>
+          <text>{{data.sumCredit}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

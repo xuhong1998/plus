@@ -1,4 +1,4 @@
-<view class="head wx-head">
+<view class="head wx-head {{show}}">
     <view class="head-time">
         <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
             <view class="weui-input">{{array[index]}}<text class='iconfont icon-open' ></text></view>

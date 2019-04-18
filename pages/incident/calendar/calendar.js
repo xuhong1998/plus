@@ -6,30 +6,32 @@ Page({
    */
   data: {
     data_style:[],
-    list:[{
-      month:4,
-      day:1,
-      festival:"全国计算机等级考试",
-      remark:"2019年全国计算机等级考试（NCRE）将举办四次考试",
-      distance:30
-    },{
-      month:4,
-      day:5,
-      festival:"清明节",
-      remark:"国家法定节日放假3天",
-      distance:34
-    },{
-      month:4,
-      day:1,
-      festival:"全国英语等级考试",
-      remark:"全国英语等级考试（Public English Test System，简称PETS，下同）是教育部考试中心设计并实施的全国性英语能力评价体系。",
-      distance:30
-    }]
+    list:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+  getCalendar: function (e) {
+    let that = this;
+    wx.request({
+      url: 'https://xuchaoyang.cn/onther/calendar.json',
+      data: {
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(e) {
+        let list = e.data;
+        for (let i in list) {
+          list[i].distance = that.getTime(list[i].month - 1, list[i].day)
+        }
+        that.setData({
+          list: list
+        })
+      }
+    })
+  },
   onLoad: function (options) {
     let date = new Date();
     let data_style = [];
@@ -40,8 +42,10 @@ Page({
       background: '#b49eeb'
     });
     this.setData({
-      data_style:data_style
+      data_style: data_style
     })
+    this.getCalendar();
+    
   },
   dayClick: function (event){
     console.log(event.detail)
@@ -58,6 +62,13 @@ Page({
     this.setData({
       data_style:data_style
     })
+  },
+  getTime(month,day){
+    let now = new Date();
+    let endDate = new Date(2019,month,day);
+    let leftTime = endDate.getTime() - now.getTime();
+    let dd = parseInt(leftTime / (1000 * 60 * 60 * 24), 10);//计算剩余的天数
+    return dd;
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

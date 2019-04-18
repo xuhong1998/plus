@@ -1,20 +1,25 @@
 {
   "pages":[
+    "pages/index/index",
+    "pages/about/article/article",
+    
+    "pages/grade/gpa/gpa",
+    "pages/incident/news/news",
+    "pages/grade/landing/landing",
+    "pages/incident/course/course",
+    "pages/about/home/home",
+    "pages/grade/exam/exam",
+    "pages/incident/calendar/calendar",
+    "pages/library/listbox/listbox",
     "pages/library/collect/collect",
     "pages/library/detail/detail",
-   
-    "pages/index/index",
-    "pages/library/listbox/listbox",
     "pages/about/about/about",
-    "pages/grade/landing/landing",
     "pages/grade/show/show",
-    
-    "pages/about/home/home",
     "pages/about/log/log",
     "pages/about/card/card",
-    "pages/incident/course/course",
-    "pages/incident/calendar/calendar",  
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/about/house/house",
+    "pages/about/houseText/houseText"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -30,6 +35,9 @@
   },
   "usingComponents": {},
   "tabBar": {
+    "color": "#404040",
+    "selectedColor": "#118ffe",
+    "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",

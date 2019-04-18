@@ -51,16 +51,17 @@
   border-bottom-right-radius:10rpx;
 }
 .item .remove{
-    width: 60px;
+    width: 90px;
     height: 100%;
     background-color: red;
     position: absolute;
     top: 0;
-    right: -60px;
+    right: -90px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
+    font-size:30rpx;
 }
 .wx-content-name,.wx-content-writer{
   width:380rpx;

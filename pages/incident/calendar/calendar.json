@@ -1,5 +1,9 @@
 {
   "usingComponents": {
     "calendar": "plugin://calendar/calendar"
-  }
+  },
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "校历",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
 }
