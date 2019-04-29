@@ -1,4 +1,5 @@
 // pages/grade/exam/exam.js
+let code = require('../../../utils/code');
 Page({
 
   /**
@@ -7,26 +8,7 @@ Page({
   data: {
     array:["2018-2019下学期考试","2018-2019下学期课程"],
     index:0,
-    exam:[{
-      name:"高等数学（下）",
-      from:"期末考试"
-    },{
-      name:"高等数学（下）",
-      from:"期末考试"
-    },{
-      name:"高等数学（下）",
-      from:"期末考试"
-    }],
-     course: [{
-      name: "高等数学（下）",
-      from: "期末考试"
-    }, {
-      name: "高等数学（下）",
-      from: "期末考试"
-    }, {
-      name: "高等数学（下）",
-      from: "期末考试"
-    }],
+    exam:[],
     show:'',
     getRotate:''
   },
@@ -43,29 +25,15 @@ Page({
       icon: "loading",
       duration: 10000
     });
-    wx.login({
-      success(res) {
-        if (res.code) {
-          console.log(res.code)
-          wx.request({
-            url: 'https://xuchaoyang.cn/Loginweb/GetExamServlet',
-            data: {
-              code: res.code,
-            },
-            header: {
-              'content-type': 'application/json' // 默认值
-            },
-            success(res) {
-              wx.hideToast();
-              console.log(res.data)
-              that.setData({
-                exam:res.data.Exam,
-                course:res.data.Course
-              })
-            }
-          })
-        }
-      }
+    code.getLogin().then((res) => {
+      code.getHttpRequest('https://xuchaoyang.cn/Loginweb/GetExamServlet', { code: res.code }).then((res) => {
+        wx.hideToast();
+        console.log(res.data)
+        that.setData({
+          exam: res.data.Exam,
+          course: res.data.Course
+        })
+      })
     })
   },
   getRotate:function(){

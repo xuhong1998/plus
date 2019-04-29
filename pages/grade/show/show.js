@@ -63,75 +63,59 @@ Page({
         icon: "loading",
         duration: 10000
       });
-      wx.login({
-        success(res) {
-          console.log(res.code)
-          if (res.code) {
-            console.log(res.code)
-            wx.request({
-              url: 'https://xuchaoyang.cn/Loginweb/ScoreServlet',
-              data: {
-                code:res.code
-              },
-              header: {
-                'content-type': 'application/json' // 默认值
-              },
-              success: function (res) {
-                wx.hideToast();
-                console.log(res.data)
-                res.data.data.ScoreList.shift();
-                res.data.data.Project.shift();
-                ScoreList = res.data.data.ScoreList;
-                Project = res.data.data.Project;
-                for(let i in Project){
-                  if (Project[i].Semester == 1){
-                    semester.push("上学期");
-                  }
-                  if (Project[i].Semester == 2) {
-                    semester.push("下学期");
-                  }
-                }
-                for (let i = 0; i < Project.length; i++) {
-                  data[i] = [];
-                  array.push(Project[i].SchoolYear + ' ' + semester[i])
-                  for (let j = 0; j < ScoreList.length; j++) {
-                    if (Project[i].SchoolYear + ' ' + Project[i].Semester == ScoreList[j].AcademicYear) {
-                      data[i].push(ScoreList[j])
-                    }
-                  }
-                }
-
-                data.reverse();
-                array.reverse();
-                for (let i = 0; i < data[0].length; i++) {
-                  if (parseInt(data[0][i].score) >= 90) {
-                    color.push("#11c1f3");
-                  } else if (parseInt(data[0][i].score) > 80) {
-                    color.push("#33cd5f");
-                  } else if (parseInt(data[0][i].score) > 70) {
-                    color.push("#886aea");
-                  } else if (parseInt(data[0][i].score) > 60) {
-                    color.push("#ffc900");
-                  } else {
-                    color.push("#CC0000");
-                  }
-                }
-                that.setData({
-                  list: data[0],
-                  array: array,
-                  data: data,
-                  Project: Project,
-                  TotalCredit: Project[Project.length - 1].TotalCredit,
-                  AverageScorePoint: Project[Project.length - 1].AverageScorePoint,
-                  color: color,
-                  show:"",
-                })
-              }
-            })
+      code.getLogin().then((res) => {
+        code.getHttpRequest('https://xuchaoyang.cn/Loginweb/ScoreServlet', { code: res.code }).then((res) => {
+          wx.hideToast();
+          console.log(res.data)
+          res.data.data.ScoreList.shift();
+          res.data.data.Project.shift();
+          ScoreList = res.data.data.ScoreList;
+          Project = res.data.data.Project;
+          for (let i in Project) {
+            if (Project[i].Semester == 1) {
+              semester.push("上学期");
+            }
+            if (Project[i].Semester == 2) {
+              semester.push("下学期");
+            }
           }
-        }
-      })
-      
+          for (let i = 0; i < Project.length; i++) {
+            data[i] = [];
+            array.push(Project[i].SchoolYear + ' ' + semester[i])
+            for (let j = 0; j < ScoreList.length; j++) {
+              if (Project[i].SchoolYear + ' ' + Project[i].Semester == ScoreList[j].AcademicYear) {
+                data[i].push(ScoreList[j])
+              }
+            }
+          }
+
+          data.reverse();
+          array.reverse();
+          for (let i = 0; i < data[0].length; i++) {
+            if (parseInt(data[0][i].score) >= 90) {
+              color.push("#11c1f3");
+            } else if (parseInt(data[0][i].score) > 80) {
+              color.push("#33cd5f");
+            } else if (parseInt(data[0][i].score) > 70) {
+              color.push("#886aea");
+            } else if (parseInt(data[0][i].score) > 60) {
+              color.push("#ffc900");
+            } else {
+              color.push("#CC0000");
+            }
+          }
+          that.setData({
+            list: data[0],
+            array: array,
+            data: data,
+            Project: Project,
+            TotalCredit: Project[Project.length - 1].TotalCredit,
+            AverageScorePoint: Project[Project.length - 1].AverageScorePoint,
+            color: color,
+            show: "",
+          })
+        })
+      })     
     },
 
     /**

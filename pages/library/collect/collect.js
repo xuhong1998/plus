@@ -1,3 +1,8 @@
+
+
+
+
+
 // pages/library/collect/collect.js
 var startX, startY, key, endX, endY, maxRight = 163;
 Page({

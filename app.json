@@ -1,12 +1,12 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/about/article/article",
+    "pages/incident/course/course",
     
+    "pages/about/article/article",
     "pages/grade/gpa/gpa",
     "pages/incident/news/news",
     "pages/grade/landing/landing",
-    "pages/incident/course/course",
     "pages/about/home/home",
     "pages/grade/exam/exam",
     "pages/incident/calendar/calendar",
@@ -21,11 +21,11 @@
     "pages/about/house/house",
     "pages/about/houseText/houseText"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "plugins": {
     "calendar": {
@@ -52,5 +52,6 @@
         "text": "关于"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,5 +1,6 @@
 // pages/incident/course/course.js
 let time = require('../../../utils/time');
+let code = require('../../../utils/code');
 Page({
 
   /**
@@ -15,65 +16,87 @@ Page({
     weekArray:[],
     px:130,
     several:2,
+    message:[],
   },
   getrequestWeek: function (week) {
-    var that = this;
+    var that = this, temp = [], message = this.data.message;
     wx.showToast({
       title: '加载中...',
       icon: "loading",
       duration: 10000
     });
-    wx.login({
-      success(res) {
-        if (res.code) {
-          console.log(res.code)
-          wx.request({
-            url: 'https://xuchaoyang.cn/Loginweb/ClassServlet',
-            data: {
-              code: res.code,
-              week:week
-            },
-            header: {
-              'content-type': 'application/json' // 默认值
-            },
-            success(res) {
-              wx.hideToast();
-              console.log(res.data,that.data.wlist)
-              let list = res.data;
-              for(let i in res.data){
-                list[i].className = list[i].className.slice(0, list[i].className.length-8);
-                console.log(list[i].className)
-              }
-              that.setData({
-                wlist:res.data
+    code.getLogin().then((res)=>{
+      code.getHttpRequest('https://xuchaoyang.cn/Loginweb/ClassServlet',{code: res.code,week:week}).then((res)=> {
+        console.log(res)
+        wx.hideToast();
+        let list = res.data;
+        for(let i in res.data){
+          for(let j in res.data){
+            if (list[i].index[0].week == list[j].index[0].week && list[i].index[0].section == list[j].index[0].section && i != j){
+              temp.push({
+                i:i,
+                j:j
               })
             }
-          })
+          }
+          list[i].className = list[i].className.slice(0, list[i].className.length-8);
         }
-      }
-    })
+        console.log(temp)
+        console.log(list)
+        that.setData({
+          wlist:list
+        })
+        message[week] = list
+        wx.setStorage({
+          key: 'course',
+          data: message,
+        })
+      })
+    });
   },
   /**
    * 生命周期函数--监听页面加载
    */
+  showCardView:function(e){
+
+  },
   bindPickerChange(e) {
     let week = parseInt(e.detail.value) + 1;
     console.log(week)
-    this.getrequestWeek(week)
+    this.getStore(week);
     this.setData({
       week: e.detail.value,
     })
   },
   onLoad: function (options) {
+    console.log()
     let now = new Date();
     this.setData({
       several:now.getDay() - 1,
       week:time.getWeek() - 1,
       weekArray: time.getweekArray(),
     });
-    this.getrequestWeek(time.getWeek());
+    
+    this.getStore(time.getWeek());
   },
-
+  getStore:function(week){
+    let that = this;
+    wx.getStorage({
+      key: 'course',
+      success(res) {
+        that.setData({ message: res.data})
+        if(res.data[week] == null){
+          that.getrequestWeek(week);
+        }
+        console.log(res.data)
+        that.setData({
+          wlist: res.data[week]
+        })
+      },fail(e){
+        that.getrequestWeek(week);
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

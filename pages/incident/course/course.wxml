@@ -35,3 +35,15 @@
         </view>
     </view>
 </scroll-view>
+<view class="wx-modal {{modalName}}">
+  <view class="wx-dialog">
+     <view class="justify-end">
+      <view class="action" bindtap="hideModal">
+        <text class="iconfont icon-error"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      <view class='000000'></view>
+    </view>
+  </view>
+</view>

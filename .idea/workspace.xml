@@ -3,40 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="81124847-5490-4298-8c4f-311aa4050365" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/wx.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/wx.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/about/about.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/about/about.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/card/card.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/card/card.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/home/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/home/home.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/home/home.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/home/home.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/home/home.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/home/home.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/home/home.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/log/log.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/log/log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/grade/gpa/gpa.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/grade/gpa/gpa.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/grade/landing/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/grade/landing/landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/grade/landing/landing.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/grade/landing/landing.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/grade/show/show.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/grade/show/show.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/grade/show/show.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/grade/show/show.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/grade/show/show.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/grade/show/show.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/incident/calendar/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/incident/calendar/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/incident/calendar/calendar.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/incident/calendar/calendar.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/incident/course/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/incident/course/course.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/incident/course/course.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/incident/course/course.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/incident/course/course.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/incident/course/course.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/incident/course/course.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/incident/course/course.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/library/collect/collect.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/library/collect/collect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/library/collect/collect.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/library/collect/collect.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/library/collect/collect.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/library/collect/collect.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/library/collect/collect.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/library/collect/collect.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/library/detail/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/library/detail/detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/library/detail/detail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/library/detail/detail.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/library/listbox/listbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/library/listbox/listbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/library/listbox/listbox.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/library/listbox/listbox.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/library/listbox/listbox.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/library/listbox/listbox.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/util.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,19 +30,20 @@
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="4" />
-          <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.12" value="4" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="16" />
-          <entry key="json" value="4" />
+          <entry key="html" value="1" />
+          <entry key="js" value="23" />
+          <entry key="json" value="6" />
           <entry key="wxml" value="16" />
           <entry key="wxss" value="7" />
         </counts>
@@ -74,14 +51,15 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="7" />
-          <entry key="HTML" value="16" />
-          <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="16" />
+          <entry key="HTML" value="17" />
+          <entry key="JSON" value="6" />
+          <entry key="JavaScript" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1619" />
+          <entry key="html" value="626" />
+          <entry key="js" value="2186" />
           <entry key="wxml" value="1736" />
           <entry key="wxss" value="34" />
         </counts>
@@ -89,8 +67,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="34" />
-          <entry key="HTML" value="1736" />
-          <entry key="JavaScript" value="1619" />
+          <entry key="HTML" value="2362" />
+          <entry key="JavaScript" value="2186" />
         </counts>
       </usages-collector>
     </session>
@@ -98,61 +76,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+        <entry file="file://$PROJECT_DIR$/pages/incident/course/course.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4425">
-              <caret line="177" column="71" selection-start-line="177" selection-start-column="71" selection-end-line="177" selection-end-column="71" />
+            <state relative-caret-position="650">
+              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/incident/news/news.wxml">
+        <entry file="file://$PROJECT_DIR$/pages/incident/calendar/calendar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1475">
-              <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
+            <state relative-caret-position="250">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+        <entry file="file://$USER_HOME$/Desktop/新建文件夹/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="39" column="115" selection-start-line="39" selection-start-column="115" selection-end-line="39" selection-end-column="115" />
-              <folding>
-                <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#2;n#view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#0;n#view#0;n#view#1;n#view#2;n#view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#1;n#view#0;n#view#1;n#view#2;n#view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#1;n#view#1;n#view#2;n#view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#3;n#view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#0;n#view#0;n#view#1;n#view#3;n#view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#1;n#view#1;n#view#3;n#view#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="725">
+              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/grade/gpa/gpa.wxml">
+        <entry file="file://$PROJECT_DIR$/pages/incident/course/course.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+            <state>
+              <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/grade/gpa/gpa.json">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/grade/gpa/gpa.js">
+        <entry file="file://$PROJECT_DIR$/utils/code.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="23" column="15" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="15" />
+            <state relative-caret-position="325">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -163,28 +126,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
+        <entry file="file://$PROJECT_DIR$/utils/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6075">
-              <caret line="243" selection-start-line="243" selection-end-line="243" />
+            <state relative-caret-position="225">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/grade/show/show.wxml">
+        <entry file="file://$PROJECT_DIR$/pages/index/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="2131">
+              <caret line="158" column="6" selection-start-line="158" selection-start-column="6" selection-end-line="158" selection-end-column="95" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/incident/course/course.wxml">
+        <entry file="file://$PROJECT_DIR$/pages/index/index.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/time.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="425">
+              <caret line="17" column="6" selection-start-line="17" selection-end-line="17" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -202,6 +170,7 @@
     <findStrings>
       <find>bi</find>
       <find>show</find>
+      <find>consol</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -220,20 +189,23 @@
         <option value="$PROJECT_DIR$/pages/library/collect/collect.wxml" />
         <option value="$PROJECT_DIR$/pages/library/collect/collect.js" />
         <option value="$PROJECT_DIR$/utils/timeClass.js" />
-        <option value="$PROJECT_DIR$/pages/incident/calendar/calendar.js" />
         <option value="$PROJECT_DIR$/pages/incident/course/course.wxml" />
         <option value="$PROJECT_DIR$/utils/time.js" />
         <option value="$PROJECT_DIR$/pages/grade/exam/exam.wxml" />
         <option value="$PROJECT_DIR$/pages/grade/exam/exam.js" />
         <option value="$PROJECT_DIR$/pages/about/home/home.wxml" />
         <option value="$PROJECT_DIR$/pages/about/home/home.wxss" />
-        <option value="$PROJECT_DIR$/pages/incident/course/course.js" />
         <option value="$PROJECT_DIR$/pages/index/index.wxss" />
-        <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/pages/incident/news/news.wxml" />
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
-        <option value="$PROJECT_DIR$/pages/grade/gpa/gpa.js" />
         <option value="$PROJECT_DIR$/pages/grade/gpa/gpa.wxml" />
+        <option value="$PROJECT_DIR$/pages/grade/gpa/gpa.js" />
+        <option value="$PROJECT_DIR$/utils/util.js" />
+        <option value="$PROJECT_DIR$/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/utils/code.js" />
+        <option value="$PROJECT_DIR$/pages/incident/course/course.js" />
+        <option value="$PROJECT_DIR$/pages/incident/calendar/calendar.js" />
+        <option value="$USER_HOME$/Desktop/新建文件夹/index.html" />
       </list>
     </option>
   </component>
@@ -243,11 +215,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="666" />
+    <option name="y" value="280" />
+    <option name="width" value="1820" />
+    <option name="height" value="1095" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -255,6 +227,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -297,14 +270,7 @@
               <item name="plus" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="incident" type="462c0819:PsiDirectoryNode" />
-              <item name="course" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plus" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="incident" type="462c0819:PsiDirectoryNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
+              <item name="calendar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="plus" type="b2602c69:ProjectViewProjectNode" />
@@ -312,11 +278,15 @@
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="plus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plus" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,17 +349,21 @@
       <workItem from="1555156150652" duration="4038000" />
       <workItem from="1555220710783" duration="4983000" />
       <workItem from="1555414848065" duration="1621000" />
+      <workItem from="1555837571812" duration="1198000" />
+      <workItem from="1555937803990" duration="735000" />
+      <workItem from="1556267542982" duration="7718000" />
+      <workItem from="1556431602211" duration="1556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34958000" />
+    <option name="totallyTimeSpent" value="46165000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15694444" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14648438" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -485,9 +459,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/timeClass.js" />
-    <entry file="file://$PROJECT_DIR$/utils/util.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/library/collect/collect.wxss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -505,13 +476,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/grade/show/show.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/time.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/grade/exam/exam.wxml">
       <provider selected="true" editor-type-id="text-editor">
@@ -537,13 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/incident/course/course.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/grade/exam/exam.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -551,27 +508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/incident/calendar/calendar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="69" column="39" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/about/home/home.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1725">
           <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4425">
-          <caret line="177" column="71" selection-start-line="177" selection-start-column="71" selection-end-line="177" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -586,43 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
           <caret line="39" column="115" selection-start-line="39" selection-start-column="115" selection-end-line="39" selection-end-column="115" />
-          <folding>
-            <element signature="n#style#0;n#view#1;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#2;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#0;n#view#0;n#view#1;n#view#2;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#1;n#view#0;n#view#1;n#view#2;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#1;n#view#1;n#view#2;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#3;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#0;n#view#0;n#view#1;n#view#3;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#1;n#view#1;n#view#3;n#view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/grade/gpa/gpa.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/incident/news/news.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6075">
-          <caret line="243" selection-start-line="243" selection-end-line="243" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/grade/show/show.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/incident/course/course.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -633,10 +536,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6050">
+          <caret line="242" selection-start-line="242" selection-end-line="242" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/grade/show/show.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/grade/gpa/gpa.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/grade/gpa/gpa.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/incident/course/course.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/incident/course/course.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/incident/calendar/calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/incident/news/news.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/time.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="15" />
+          <caret line="17" column="6" selection-start-line="17" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2131">
+          <caret line="158" column="6" selection-start-line="158" selection-start-column="6" selection-end-line="158" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/新建文件夹/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/incident/course/course.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
       </provider>
     </entry>

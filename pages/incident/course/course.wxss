@@ -90,7 +90,8 @@
   align-items: center;
   display: flex;
   border-radius: 4px;
-  color:#fff;
+  color:#e54d42;
+  background:#fadbd9;
   text-align: center;
 }
 .wx-week-num{

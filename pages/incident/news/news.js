@@ -1,4 +1,5 @@
 // pages/incident/news/news.js
+let code = require('../../../utils/code');
 Page({
 
   /**
@@ -13,30 +14,23 @@ Page({
   },
   getRequest:function(){
     let swiperList = [],that = this;
-    wx.request({
-      url: 'https://xuchaoyang.cn/Loginweb/GetMessageServlet',
-      data:{},
-      header:{
-        'content-type': 'application/json' // 默认值
-      },
-      success(res){
-        console.log(res.data);
-        for(let i in res.data.message1){
-          swiperList.push({
-            id: i,
-            type: 'image',
-            image: res.data.message1[i].image,
-            url:res.data.message1[i].url
-          })
-          that.setData({
-            swiperList: swiperList,
-            news: res.data.SchoolMessage,
-            academic: res.data.ScienceMessage3,
-            JaoWu:res.data.JaoWu,
-            show:""
-          })
-          console.log(that.data.academic, res.data.ScienceMessage3)
-        }
+    code.getHttpRequest('https://xuchaoyang.cn/Loginweb/GetMessageServlet', { }).then((res) => {
+      console.log(res.data);
+      for (let i in res.data.message1) {
+        swiperList.push({
+          id: i,
+          type: 'image',
+          image: res.data.message1[i].image,
+          url: res.data.message1[i].url
+        })
+        that.setData({
+          swiperList: swiperList,
+          news: res.data.SchoolMessage,
+          academic: res.data.ScienceMessage3,
+          JaoWu: res.data.JaoWu,
+          show: ""
+        })
+        console.log(that.data.academic, res.data.ScienceMessage3)
       }
     })
   },

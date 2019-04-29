@@ -6,9 +6,6 @@ Page({
    */
   data: {
     required:[],
-    optional:[],
-    rests:[],
-    ScoreList: [],
     total:0,
     control:{
       style: "",
@@ -89,70 +86,54 @@ Page({
       icon: "loading",
       duration: 10000
     });
-    wx.login({
-      success(res) {
-        console.log(res.code)
-        if (res.code) {
-          console.log(res.code)
-          wx.request({
-            url: 'https://xuchaoyang.cn/Loginweb/ScoreServlet',
-            data: {
-              code: res.code
-            },
-            header: {
-              'content-type': 'application/json' // 默认值
-            },
-            success: function (res) {
-              wx.hideToast();
-              console.log(res)
-              res.data.data.ScoreList.shift();
-              ScoreList = res.data.data.ScoreList;
-              console.log(ScoreList);
-              for(let i in ScoreList){
-                if (parseInt(ScoreList[i].FinalScore) >= 90) {
-                  ScoreList[i].color = "#11c1f3";
-                } else if (parseInt(ScoreList[i].score) > 80) {
-                  ScoreList[i].color = "#33cd5f";
-                } else if (parseInt(ScoreList[i].score) > 70) {
-                  ScoreList[i].color = "#886aea";
-                } else if (parseInt(ScoreList[i].score) > 60) {
-                  ScoreList[i].color = "#ffc900";
-                } else {
-                  ScoreList[i].color = "#CC0000";
-                }
-                ScoreList[i].id = i;
-                ScoreList[i].isopen = false;
-                ScoreList[i].style = ""
-                if (ScoreList[i].CourseCategory == "必修" || ScoreList[i].CourseCategory == "分组必修"){
-                  if (ScoreList[i].FinalScore != 0){
-                    required.push(ScoreList[i]);
-                    newsArr.push(ScoreList[i])
-                 }          
-                }else if (ScoreList[i].CourseCategory == "选修") {
-                  optional.push(ScoreList[i])
-                  newsArr.push(ScoreList[i])
-                }else{
-                  rests.push(ScoreList[i])
-                  newsArr.push(ScoreList[i])
-                }
-              }
-              that.data.data.sumGpa = res.data.data.SchoolCollect.AverageScorePoint;
-              that.data.data.sumCredit = res.data.data.SchoolCollect.TotalCredit;
-              console.log(required)
-              that.setData({
-                ScoreList: newsArr,
-                required:required,
-                optional: optional,
-                rests: rests,
-                show:"",
-                data:that.data.data
-              })
+    code.getLogin().then((res) => {
+      code.getHttpRequest('https://xuchaoyang.cn/Loginweb/ScoreServlet', { code: res.code }).then((res) => {
+        wx.hideToast();
+        console.log(res)
+        res.data.data.ScoreList.shift();
+        ScoreList = res.data.data.ScoreList;
+        console.log(ScoreList);
+        for (let i in ScoreList) {
+          if (parseInt(ScoreList[i].FinalScore) >= 90) {
+            ScoreList[i].color = "#11c1f3";
+          } else if (parseInt(ScoreList[i].score) > 80) {
+            ScoreList[i].color = "#33cd5f";
+          } else if (parseInt(ScoreList[i].score) > 70) {
+            ScoreList[i].color = "#886aea";
+          } else if (parseInt(ScoreList[i].score) > 60) {
+            ScoreList[i].color = "#ffc900";
+          } else {
+            ScoreList[i].color = "#CC0000";
+          }
+          ScoreList[i].id = i;
+          ScoreList[i].isopen = false;
+          ScoreList[i].style = ""
+          if (ScoreList[i].CourseCategory == "必修" || ScoreList[i].CourseCategory == "分组必修") {
+            if (ScoreList[i].FinalScore != 0) {
+              required.push(ScoreList[i]);
+              newsArr.push(ScoreList[i])
             }
-          })
+          } else if (ScoreList[i].CourseCategory == "选修") {
+            optional.push(ScoreList[i])
+            newsArr.push(ScoreList[i])
+          } else {
+            rests.push(ScoreList[i])
+            newsArr.push(ScoreList[i])
+          }
         }
-      }
+        that.data.data.sumGpa = res.data.data.SchoolCollect.AverageScorePoint;
+        that.data.data.sumCredit = res.data.data.SchoolCollect.TotalCredit;
+        console.log(required)
+        that.setData({
+          ScoreList: newsArr,
+          required: required,
+          optional: optional,
+          rests: rests,
+          show: "",
+          data: that.data.data
+        })
+      })
     })
-
   },
   getGPA:function(){
     let a = 0,b = 0,temp = 0;

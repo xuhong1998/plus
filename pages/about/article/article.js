@@ -1,5 +1,6 @@
 // pages/about/article/article.js
 var WxParse = require('../../../wxParse/wxParse.js');
+let code = require('../../../utils/code');
 Page({
 
   /**
@@ -18,18 +19,8 @@ Page({
   },
   httpRequest:function(url){
     let that = this;
-    wx.request({
-      url: 'https://xuchaoyang.cn/Loginweb/ShowMessage',
-      data: {
-        url:url
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res) {
-        WxParse.wxParse("content", 'html', res.data.message, that, 5)
-        console.log(res)
-      }
+    code.getHttpRequest('https://xuchaoyang.cn/Loginweb/ShowMessage', { url:url }).then((res) => {
+      WxParse.wxParse("content", 'html', res.data.message, that, 5)
     })
   },
   /**

@@ -2,7 +2,7 @@
     <view class="header">
         <view class='images'>
           <image src='../../../images/wx.png'></image>
-          <view class='header-text'>「长大plus」2.0.0</view>
+          <view class='header-text'>「长大plus」2.1.1</view>
         </view>
         <view class="wx-p">「长大plus」小程序为长江大学大学生提供成绩查询，课表查询，图书查询等服务</view>
     </view>

@@ -1,6 +1,7 @@
 //login.js
 //获取应用实例
 var app = getApp();
+let code = require('../../../utils/code');
 Page({
   data: {
     remind: '加载中',
@@ -23,80 +24,67 @@ Page({
   },
   getlanding:function (userName, userpassword){
     let that = this;
-    wx.login({
-      success(res) {
-        if (res.code) {
-          console.log(res.code);
+    code.getLogin().then((res) => {
+      wx.showToast({
+        title: '绑定中...',
+        icon: "loading",
+        duration: 10000
+      });
+      code.getHttpRequest('https://xuchaoyang.cn/Loginweb/BoundStuNoServlet', { code: res.code, userName: userName, userpassword: userpassword }).then((e) => {
+        that.setData({
+          isbind: false
+        })
+        console.log(e);
+        if (e.data.state.length == 5) {
           wx.showToast({
-            title: '绑定中...',
-            icon: "loading",
-            duration: 10000
-          });
-          wx.request({
-            url: 'https://xuchaoyang.cn/Loginweb/BoundStuNoServlet',
-            data: {
-              code: res.code,
-              userName:userName,
-              userpassword:userpassword
-            },
-            header: {
-              'content-type': 'application/json' // 默认值
-            },
-            success(e) {
-              that.setData({
-                isbind: false
-              })
-              console.log(e);
-              if(e.data.state.length == 5){
-                wx.showToast({
-                  title: '账户或密码错误',
-                  icon: 'success',
-                  image:'../../../images/loser.png',
-                  duration: 4000
-                })
-                return;
-              }
-              console.log(e)
-              app.globalData.isLogin = true;
-              if(e.data.state){
-                if (that.data.page == 1) {
-                  wx.redirectTo({
-                    url: '../show/show',
-                  })
-                }
-                if (that.data.page == 2) {
-                  wx.redirectTo({
-                    url: '../../incident/course/course',
-                  })
-                }
-                if (that.data.page == 3) {
-                  wx.redirectTo({
-                    url: '../gpa/gpa',
-                  })
-                }
-                if (that.data.page == 4) {
-                  wx.redirectTo({
-                    url: '../exam/exa',
-                  })
-                }
-                wx.showToast({
-                  title: '绑定成功',
-                  icon: 'success',
-                  duration: 4000
-                })
-              }else{
-                wx.showToast({
-                  title: '账户或密码错误',
-                  icon: 'success',
-                  duration: 4000
-                })
-              }
-              
-            }
+            title: '账户或密码错误',
+            icon: 'success',
+            image: '../../../images/loser.png',
+            duration: 4000
+          })
+          return;
+        }
+        console.log(e)
+        app.globalData.isLogin = true;
+        // wx.setStorage({
+        //   key: 'id',
+        //   data: userName
+        // // })
+        wx.clearStorage();
+        if (e.data.state) {
+          if (that.data.page == 1) {
+            wx.redirectTo({
+              url: '../show/show',
+            })
+          }
+          if (that.data.page == 2) {
+            wx.redirectTo({
+              url: '../../incident/course/course',
+            })
+          }
+          if (that.data.page == 3) {
+            wx.redirectTo({
+              url: '../gpa/gpa',
+            })
+          }
+          if (that.data.page == 4) {
+            wx.redirectTo({
+              url: '../exam/exa',
+            })
+          }
+          wx.showToast({
+            title: '绑定成功',
+            icon: 'success',
+            duration: 4000
           })
         } else {
+          wx.showToast({
+            title: '账户或密码错误',
+            icon: 'success',
+            duration: 4000
+          })
         }
-      }
+      })
     })
   },
   onReady: function () {

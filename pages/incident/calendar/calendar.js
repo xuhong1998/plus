@@ -1,4 +1,5 @@
 // pages/incident/calendar/calendar.js
+let code = require('../../../utils/code');
 Page({
 
   /**
@@ -14,22 +15,14 @@ Page({
    */
   getCalendar: function (e) {
     let that = this;
-    wx.request({
-      url: 'https://xuchaoyang.cn/onther/calendar.json',
-      data: {
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(e) {
-        let list = e.data;
-        for (let i in list) {
-          list[i].distance = that.getTime(list[i].month - 1, list[i].day)
-        }
-        that.setData({
-          list: list
-        })
+    code.getHttpRequest('https://xuchaoyang.cn/onther/calendar.json',{}).then((res)=>{
+      let list = res.data;
+      for (let i in list) {
+        list[i].distance = that.getTime(list[i].month - 1, list[i].day)
       }
+      that.setData({
+        list: list
+      })
     })
   },
   onLoad: function (options) {

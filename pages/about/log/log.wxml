@@ -2,6 +2,19 @@
     <view class="wx-item">
         <view class="content">
             <view class="cu-capsule radius">
+                <view class="cu-tag wx-white">v2.1.1</view>
+                <view class="cu-tag line-white">2019/04/29</view>
+            </view>
+            <view class="margin-top-sm text-content">
+                <view>1.修复课表bug</view>
+                <view>2.加入本地缓存</view>
+                <view>3.优化部分后台接口</view>
+            </view>
+        </view>
+    </view>
+    <view class="wx-item">
+        <view class="content">
+            <view class="cu-capsule radius">
                 <view class="cu-tag wx-white">v2.0.1</view>
                 <view class="cu-tag line-white">2019/04/16</view>
             </view>
