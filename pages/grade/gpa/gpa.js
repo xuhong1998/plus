@@ -1,4 +1,5 @@
 // pages/grade/gpa/gpa.js
+let code = require('../../../utils/code');
 Page({
 
   /**

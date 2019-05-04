@@ -1,4 +1,5 @@
 // pages/grade/show/show.js
+let code = require('../../../utils/code');
 Page({
 
     /**

@@ -60,7 +60,7 @@ Page({
     let now = new Date();
     let endDate = new Date(2019,month,day);
     let leftTime = endDate.getTime() - now.getTime();
-    let dd = parseInt(leftTime / (1000 * 60 * 60 * 24), 10);//计算剩余的天数
+    let dd = parseInt(leftTime / (1000 * 60 * 60 * 24), 10) + 1;//计算剩余的天数
     return dd;
   },
   /**

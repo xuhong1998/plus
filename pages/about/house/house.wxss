@@ -1,4 +1,4 @@
-@import "../../../weui.wxss";
+@import "../../../css/weui.wxss";
 page{
     background-color:#f4f4f4 ;
     margin: 0rpx;

@@ -17,7 +17,6 @@
     "pages/grade/show/show",
     "pages/about/log/log",
     "pages/about/card/card",
-    "pages/logs/logs",
     "pages/about/house/house",
     "pages/about/houseText/houseText"
   ],
