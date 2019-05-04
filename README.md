@@ -1,11 +1,13 @@
 # 长大教务处
 
 ## 介绍
+
 {**以下是码云平台说明，您可以替换此简介**
 码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
 无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
 
 ## 软件截图
+
 > 部分页面，截止于2019.4.17
 
 ![image](https://github.com/xuhong1998/img-folder/blob/master/changda/haoksnmjk.jpg)
@@ -20,7 +22,44 @@
 - [x] 学校新闻(信息来自长江大学官网)
 - [x] 房贷计算
 
-
 ## 目录结构
+
+```
+    .
+    │  app.js
+    │  app.json
+    │  app.wxss
+    │  README.md
+    │  sitemap.json
+    ├─css	   				//样式资源  
+    ├─images   				//图片资源
+    ├─pages					//页面
+    │  ├─about		
+    │  │  ├─about    		
+    │  │  ├─article         //新闻详情
+    │  │  ├─card   			//新闻详情
+    │  │  ├─home    		//关于页面
+    │  │  ├─house    		//房贷计算
+    │  │  ├─houseText		//房贷详情
+    │  │  └─log				//版本日志
+    │  ├─grade
+    │  │  ├─exam			//考试安排
+    │  │  ├─gpa   			//绩点页面
+    │  │  ├─landing 		//登陆页面
+    │  │  └─show    		//成绩页面
+    │  ├─incident
+    │  │  ├─calendar		//校历页面
+    │  │  ├─course			//图书课表	
+    │  │  └─news			//新闻页面
+    │  ├─index				//首页
+    │  └─library
+    │      ├─collect		//图书搜索	
+    │      ├─detail			//图书详情
+    │      └─listbox		//图书搜索
+    ├─utils
+    │      code.js 			//pomrise
+    │      time.js      	//日期接口
+    └─wxParse  				//html解析接口
+```
 ![image](https://github.com/xuhong1998/img-folder/blob/master/changda/hahncjsn.png)
 
