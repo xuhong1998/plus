@@ -32,5 +32,5 @@
 
 
 #### 目录结构
-![image](https://static.firefoxchina.cn/img/201904/5_5cc7de248e3c20.jpg)
+![image](https://github.com/xuhong1998/img-folder/blob/master/changda/3S7%7DLR%5D%7EU8%5DGEQ(G%2492KI5P.png)
 
