@@ -11,7 +11,6 @@
 > 部分页面，截止于2019.4.17
 
 ![image](https://github.com/xuhong1998/img-folder/blob/master/changda/haoksnmjk.jpg)
-
 ## 功能介绍
 
 - [x] 成绩查询/绩点计算器
@@ -26,6 +25,7 @@
 
 ```
     .
+    ─plus
     │  app.js
     │  app.json
     │  app.wxss
