@@ -31,7 +31,7 @@
     │  sitemap.json
     ├─css                      //样式资源  
     ├─images                   //图片资源
-    ├─pages	                   //页面
+    ├─pages                    
     │  ├─about		
     │  │  ├─about    		
     │  │  ├─article            //新闻详情
@@ -39,23 +39,23 @@
     │  │  ├─home               //关于页面
     │  │  ├─house              //房贷计算
     │  │  ├─houseText          //房贷详情
-    │  │  └─log				   //版本日志
+    │  │  └─log                //版本日志
     │  ├─grade
-    │  │  ├─exam			   //考试安排
-    │  │  ├─gpa   			 //绩点页面
-    │  │  ├─landing 		 //登陆页面
-    │  │  └─show    		 //成绩页面
+    │  │  ├─exam               //考试安排
+    │  │  ├─gpa                //绩点页面
+    │  │  ├─landing            //登陆页面
+    │  │  └─show               //成绩页面
     │  ├─incident
-    │  │  ├─calendar		 //校历页面
-    │  │  ├─course		 	 //图书课表	
-    │  │  └─news		  	 //新闻页面
-    │  ├─index				   //首页
+    │  │  ├─calendar           //校历页面
+    │  │  ├─course             //图书课表	
+    │  │  └─news               //新闻页面
+    │  ├─index                 //首页
     │  └─library
-    │      ├─collect		 //图书搜索	
-    │      ├─detail			 //图书详情
-    │      └─listbox		 //图书搜索
+    │      ├─collect           //图书搜索	
+    │      ├─detail            //图书详情
+    │      └─listbox           //图书搜索
     ├─utils
-    │      code.js 			 //pomrise
-    │      time.js       //日期接口
-    └─wxParse  				   //html解析接口
+    │      code.js             //pomrise
+    │      time.js             //日期接口
+    └─wxParse                  //html解析接口
 ```
