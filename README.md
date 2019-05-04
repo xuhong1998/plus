@@ -7,20 +7,18 @@
 
 ## 软件截图
 > 部分页面，截止于2019.4.17
+
 ![image](https://github.com/xuhong1998/img-folder/blob/master/changda/haoksnmjk.jpg)
 
-## 安装教程
+## 功能介绍
 
-1. xxxx
-2. xxxx
-3. xxxx
-
-## 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
-
+- [x] 成绩查询/绩点计算器
+- [x] 图书搜索/图书收藏(书本详细信息来自豆瓣)
+- [x] 课表查询
+- [x] 学校校历（基础的日历功能，自定义倒计时待开发）
+- [x] 考表
+- [x] 学校新闻(信息来自长江大学官网)
+- [x] 房贷计算
 
 
 ## 目录结构
