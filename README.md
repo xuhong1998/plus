@@ -32,5 +32,5 @@
 
 
 #### 目录结构
-![image](https://xuchaoyang.cn/onther/images/3S7}LR]~U8]GEQ(G$92KI5P.png)
+![image](https://static.firefoxchina.cn/img/201904/5_5cc7de248e3c20.jpg)
 
