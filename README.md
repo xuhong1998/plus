@@ -29,16 +29,16 @@
     │  app.wxss
     │  README.md
     │  sitemap.json
-    ├─css	   				     //样式资源  
-    ├─images   				   //图片资源
-    ├─pages					     //页面
+    ├─css                      //样式资源  
+    ├─images                   //图片资源
+    ├─pages	                   //页面
     │  ├─about		
     │  │  ├─about    		
-    │  │  ├─article      //新闻详情
-    │  │  ├─card   			 //新闻详情
-    │  │  ├─home    		 //关于页面
-    │  │  ├─house    		 //房贷计算
-    │  │  ├─houseText		 //房贷详情
+    │  │  ├─article            //新闻详情
+    │  │  ├─card               //新闻详情
+    │  │  ├─home               //关于页面
+    │  │  ├─house              //房贷计算
+    │  │  ├─houseText          //房贷详情
     │  │  └─log				   //版本日志
     │  ├─grade
     │  │  ├─exam			   //考试安排
