@@ -4,11 +4,11 @@ page{
     margin: 0rpx;
 }
 .head{
-    height: 100rpx;
+    height: 94rpx;
     width: 750rpx;
     background-color: #FFFFFF;
     color: #000000;
-    font-size: 3vh;
+    font-size: 30rpx;
 }
 .weui-label{
 	width: 250rpx;
@@ -27,7 +27,7 @@ page{
 		height: 90rpx;
 }
 .solid{
-    height: 10rpx;
+    height: 6rpx;
     width: 250rpx;
     background-color: #1aad19;
     position: absolute;
@@ -92,8 +92,23 @@ page{
     text-align: center;
 }
 .button{
-    margin-top: 40rpx;
+    margin-top: 80rpx;
     margin-left: 70rpx;
     margin-right: 70rpx;
     background-color: #ffa127;
+}
+.weui-input label:nth-child(1){
+  margin-right:13rpx;
+}
+.weui-input label radio{
+  margin-right: 15rpx;
+}
+.weui-input label {
+  font-size: 26rpx;
+}
+.weui-cell {
+  height: 120rpx;
+}
+.weui-cell__hd .weui-label{
+  
 }

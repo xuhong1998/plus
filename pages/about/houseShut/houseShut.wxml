@@ -1,0 +1,60 @@
+<view class="head">
+    <view class="average">
+        <text>首月月供</text>
+        <text>{{average}}<text>元</text></text>
+    </view>
+    <view class=" message">
+        <view class="money">
+            <text>公积金贷款总额</text>
+            <text>{{data.findMoney}}万元</text>
+        </view>
+        <view class="rate">
+            <text>公积金贷款利率</text>
+            <text>{{data.findRate}}%</text>
+        </view>
+        <view class="year">
+            <text>公积金贷款年限</text>
+            <text>{{data.year}}年</text>
+        </view>
+    </view>
+		<view class=" message">
+        <view class="money">
+            <text>商业贷款总额</text>
+            <text>{{data.money}}万元</text>
+        </view>
+        <view class="rate">
+            <text>商业贷款利率</text>
+            <text>{{data.rate}}%</text>
+        </view>
+        <view class="year">
+            <text>贷款年限</text>
+            <text>{{data.year}}年</text>
+        </view>
+    </view>
+</view>
+<view class="nav">
+    <view class=" interest">
+        <text>累计利息(元) : </text>
+        <text>{{interest}}</text>
+    </view>
+    <view class="sum">
+        <text>累计还款总额(元) : </text>
+        <text>  {{sum}}</text>
+    </view>
+</view>
+<view class="navigation">
+    <text>期数</text>
+    <text>月供(元)</text>
+    <text>本金(元)</text>
+    <text>利息(元)</text>
+    <text>剩余贷款(元)</text>
+</view>
+<block wx:for="{{index}}" wx:for-item="name" wx:for-index="item">
+    <view  class="setData">
+        <text>第{{name}}期</text>
+        <text>{{motMoney[item]}}</text>
+        <text>{{essence[item]}}</text>
+        <text>{{inter[item]}}</text>
+        <text>{{surplus[item]}}</text>
+    </view>
+</block>

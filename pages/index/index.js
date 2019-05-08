@@ -179,7 +179,7 @@ Page({
   getWeek:function(list){//处理课表
     let that = this, course = [], time = new Date(), isCourse = false;
     for (let i in list) {
-     // list[i].className = list[i].className.slice(0, list[i].className.length - 8);
+      list[i].className = list[i].className.slice(0, list[i].className.length - 8);
       if (list[i].index[0].week == that.data.weekIndex[time.getDay()]) {
         course.push({
           id: (parseInt(list[i].index[0].section) + 1),
@@ -267,6 +267,7 @@ Page({
       wea.images = seteat.images;
       wea.icon = seteat.icon;
       wea.color = seteat.color;
+      wea.text = seteat.text;
       that.setData({
         wea:wea
       })
@@ -279,32 +280,38 @@ Page({
     let seteat = {
       images:"",
       color:"",
-      icon:""
+      icon:"",
+      text:""
     };
     if(icon == "yu"){
       seteat.images = "06";
       seteat.color = "#5dc8e1";
       seteat.icon = "icon-yu";
+      seteat.text = "Rain";
       return seteat;
     }if(icon == "yun" || icon == "yin"){
       seteat.images = "02";
       seteat.color = "#53b1ff";
       seteat.icon = "icon-yintian";
+      seteat.text = "Cloudy";
       return seteat;
     } if (icon == "qing") {
       seteat.images = "03";
       seteat.color = "#4cb4fb";
       seteat.icon = "icon-duoyun";
+      seteat.text = "Sunny";
       return seteat;
     } if (icon == "xue") {
       seteat.images = "04";
       seteat.color = "#6ac0fe";
       seteat.icon = "icon-xue";
+      seteat.text = "Snowy";
       return seteat;
     } 
     seteat.images = "01";
     seteat.color = "#53b1ff";
     seteat.icon = "icon-duoyun";
+    seteat.text = "Sunny";
     return seteat;
   },
   setClass:function(){
@@ -314,6 +321,14 @@ Page({
       })
     }
     
+  }, 
+  setFrom:function(e){
+    wx.showModal({
+      title: '提示',
+      content: e.currentTarget.id,
+      success: function (res) {
+      }
+    })
   },
   onHide: function () {
 

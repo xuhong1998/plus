@@ -1,8 +1,8 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/incident/course/course",
-    
     "pages/about/article/article",
     "pages/grade/gpa/gpa",
     "pages/incident/news/news",
@@ -18,7 +18,8 @@
     "pages/about/log/log",
     "pages/about/card/card",
     "pages/about/house/house",
-    "pages/about/houseText/houseText"
+    "pages/about/houseText/houseText",
+    "pages/about/houseShut/houseShut"
   ],
   "window": {
     "backgroundTextStyle": "light",

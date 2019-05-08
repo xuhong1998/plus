@@ -40,8 +40,8 @@
                     </view>
                     <view class="weui-cell__bd">
                         <radio-group class="weui-input" bindchange="radioChange">
-                            <label><radio id="1" checked='ture'/>等额本息</label>
-                            <label><radio id="2"/>等额本金</label>
+                            <label><radio value="1" checked="{{bool}}"/>等额本息</label>
+                            <label><radio value="2"/>等额本金</label>
                         </radio-group>
                     </view>
                 </view>
@@ -82,8 +82,8 @@
                     </view>
                     <view class="weui-cell__bd">
                         <radio-group class="weui-input" bindchange="radioChange">
-                            <label><radio id="1" checked='ture'/>等额本息</label>
-                            <label><radio id="2"/>等额本金</label>
+                            <label><radio value="1" checked="{{bool}}"/>等额本息</label>
+                            <label><radio value="2"/>等额本金</label>
                         </radio-group>
                     </view>
                 </view>
@@ -123,7 +123,7 @@
                         <view class="weui-label">商业贷款利率(%)</view>
                     </view>
                     <view class="weui-cell__bd">
-                        <input class="weui-input" maxlength="5" type="number" name="rate" placeholder="3.25" />
+                        <input class="weui-input" maxlength="5" type="number" name="rate" placeholder="4.9" />
                     </view>
                 </view>
                 <view class="weui-cell weui-cell_input">
@@ -140,15 +140,13 @@
                     </view>
                     <view class="weui-cell__bd" >
                         <radio-group class="weui-input" bindchange="findSelect">
-                            <label><radio id="1" checked='ture'/>等额本息</label>
-                            <label><radio id="2"/>等额本金</label>
+                            <label><radio value="1" checked="{{bool}}"/>等额本息</label>
+                            <label><radio value="2"/>等额本金</label>
                         </radio-group>
                     </view>
                 </view>
             </view>
             <button type="primary" class="button" bindtap="findBtn"  formType="submit">计算</button>
         </form>
-
     </view>
-
 </view>

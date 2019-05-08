@@ -52,7 +52,7 @@
                 <view class='air'>{{wea.temp}}</view>
                 <view class='weather-rest'>
                     <view class='round'></view>
-                    <view class='weather-rest-text'>Sunny</view>
+                    <view class='weather-rest-text'>{{wea.text}}</view>
                     <view class='site'>{{wea.site}}</view>
                 </view>
             </view>

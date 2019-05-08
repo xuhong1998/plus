@@ -68,6 +68,15 @@ Page({
         code.getHttpRequest('https://xuchaoyang.cn/Loginweb/ScoreServlet', { code: res.code }).then((res) => {
           wx.hideToast();
           console.log(res.data)
+          if(res.data.state.length == 5){
+            wx.showToast({
+              title: '加载失败',
+              icon: 'success',
+              image: '../../../images/loser.png',
+              duration: 4000
+            })
+            return;
+          }
           res.data.data.ScoreList.shift();
           res.data.data.Project.shift();
           ScoreList = res.data.data.ScoreList;

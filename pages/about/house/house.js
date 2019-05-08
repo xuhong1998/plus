@@ -26,18 +26,20 @@ Page({
 			money: 0,
 			year: 1,
 			rate: 4.9,
-		}
+		},
+    bool:true
   },
   /**
    * 生命周期函数--监听页面加载
    */
   jumpBtn:function(){
 		const that = this.data.data;
+    console.log(that)
     if(this.data.data.money == 0||this.data.data.year == 0){
       return;
     }else {
       wx.navigateTo({
-        url: '/pages/houseText/houseText?id=' + JSON.stringify(that)
+        url: '/pages/about/houseText/houseText?id=' + JSON.stringify(that)
       })
     }
   },
@@ -51,9 +53,10 @@ Page({
     this.setData({data:{select:this.data.data.select,money: even.detail.value,year:this.data.data.year,rate:this.data.data.rate}})
   },
 	radioChange:function(even){
-		if (even.detail.id == 1) {
+    console.log(even)
+		if (even.detail.value == 1) {
 			this.setData({ data: { select: 0, money: this.data.data.money, year: this.data.data.year, rate: this.data.data.rate } });
-		} else if (even.detail.id == 2) {
+    } else if (even.detail.value == 2) {
 			this.setData({  data: { select: 1, money: this.data.data.money, year: this.data.data.year, rate: this.data.data.rate } });
 		}
 	},
@@ -62,11 +65,11 @@ Page({
 	},
   select:function(id){
     if (id == 1){
-      this.setData({ left:0, index:0,info:"",data:{select:0,money:0,year:0,rate:4.9}});
+      this.setData({ left: 0, index: 0, info: "", bool: true,data:{select:0,money:0,year:0,rate:4.9}});
     } else if(id == 2){
-      this.setData({left:250,index:1,info:"",data:{select:0,money:0,year:0,rate:3.25}})
+      this.setData({ left: 250, index: 1, info: "", bool: true,data:{select:0,money:0,year:0,rate:3.25}})
     }else if(id ==3){
-      this.setData({ left: 500, index: 2 })
+      this.setData({ left: 500, index: 2,bool: true, })
     }
   },
   touchStart: function (even) {
@@ -126,7 +129,7 @@ Page({
 			return;
 		}else{
 			wx.navigateTo({
-        url: '../houseText/houseText?id=' + JSON.stringify(that)
+        url: '../houseShut/houseShut?id=' + JSON.stringify(that)
 			})
 		}
 	},
